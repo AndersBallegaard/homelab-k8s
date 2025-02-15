@@ -62,3 +62,8 @@ tofu apply
 ```bash
 ansible-inventory -i inventory.yml --graph --vars
 ```
+
+## Perform VM Baseline configuration
+```
+ansible-playbook -i inventory.yml playbooks/baseline_vm.yml
+```
