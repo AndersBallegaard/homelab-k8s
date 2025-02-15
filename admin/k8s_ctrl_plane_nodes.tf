@@ -15,7 +15,7 @@ resource "proxmox_vm_qemu" "ctrl_vmhost_a" {
   cicustom   = "vendor=nas_v6:snippets/ubuntu24-cloud-init-snippet.yml"
   ciupgrade  = true
   nameserver = "2a0e:97c0:ae1:: 1.1.1.1"
-  ipconfig0  = "ip=10.25.1.6${count.index}/24,gw=10.25.1.1,ip6=2a0e:97c0:ae2:2501::a0c${count.index}/64,gw6=2a0e:97c0:ae2:2501::1"
+  ipconfig0  = "ip=${var.proxmox_ipv4_net}.6${count.index}/24,gw=${var.proxmox_ipv4_net}.1,ip6=${var.proxmox_ipv6_net}::a0c${count.index}/64,gw6=${var.proxmox_ipv6_net}::1"
   skip_ipv6  = false
   ciuser     = var.vm_user_username
   sshkeys    = var.vm_user_sshkey
@@ -28,7 +28,7 @@ resource "proxmox_vm_qemu" "ctrl_vmhost_a" {
       scsi0 {
         # We have to specify the disk from our template, else Terraform will think it's not supposed to be there
         disk {
-          storage = "nas_v6"
+          storage = "${var.proxmox_vm_storage}"
           # The size of the disk should be at least as big as the disk in the template. If it's smaller, the disk will be recreated
           size    = "10G" 
         }
@@ -38,7 +38,7 @@ resource "proxmox_vm_qemu" "ctrl_vmhost_a" {
       # Some images require a cloud-init disk on the IDE controller, others on the SCSI or SATA controller
       ide1 {
         cloudinit {
-          storage = "nas_v6"
+          storage = "${var.proxmox_vm_storage}"
         }
       }
     }
@@ -46,7 +46,7 @@ resource "proxmox_vm_qemu" "ctrl_vmhost_a" {
 
   network {
     id = 0
-    bridge = "VL2501"
+    bridge = var.proxmox_nic
     model  = "virtio"
   }
 }
@@ -67,7 +67,7 @@ resource "proxmox_vm_qemu" "ctrl_vmhost_b" {
   cicustom   = "vendor=nas_v6:snippets/ubuntu24-cloud-init-snippet.yml"
   ciupgrade  = true
   nameserver = "2a0e:97c0:ae1:: 1.1.1.1"
-  ipconfig0  = "ip=10.25.1.7${count.index}/24,gw=10.25.1.1,ip6=2a0e:97c0:ae2:2501::b0c${count.index}/64,gw6=2a0e:97c0:ae2:2501::1"
+  ipconfig0  = "ip=${var.proxmox_ipv4_net}.7${count.index}/24,gw=${var.proxmox_ipv4_net}.1,ip6=${var.proxmox_ipv6_net}::b0c${count.index}/64,gw6=${var.proxmox_ipv6_net}::1"
   skip_ipv6  = false
   ciuser     = var.vm_user_username
   sshkeys    = var.vm_user_sshkey
@@ -80,7 +80,7 @@ resource "proxmox_vm_qemu" "ctrl_vmhost_b" {
       scsi0 {
         # We have to specify the disk from our template, else Terraform will think it's not supposed to be there
         disk {
-          storage = "nas_v6"
+          storage = "${var.proxmox_vm_storage}"
           # The size of the disk should be at least as big as the disk in the template. If it's smaller, the disk will be recreated
           size    = "10G" 
         }
@@ -90,7 +90,7 @@ resource "proxmox_vm_qemu" "ctrl_vmhost_b" {
       # Some images require a cloud-init disk on the IDE controller, others on the SCSI or SATA controller
       ide1 {
         cloudinit {
-          storage = "nas_v6"
+          storage = "${var.proxmox_vm_storage}"
         }
       }
     }
@@ -98,7 +98,7 @@ resource "proxmox_vm_qemu" "ctrl_vmhost_b" {
 
   network {
     id = 0
-    bridge = "VL2501"
+    bridge = var.proxmox_nic
     model  = "virtio"
   }
 }

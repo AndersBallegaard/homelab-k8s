@@ -22,7 +22,22 @@ variable "proxmox_target_node_c" {
     type = string
     default = "thor" # Intentional due to the nodes avalible, should be changed when a 3rd proxmox node is added
 }
-
+variable "proxmox_nic" {
+  type = string
+  default = "VL2501"
+}
+variable "proxmox_ipv4_net" {
+  type = string
+  default = "10.25.1" # Expects network part of /24
+}
+variable "proxmox_ipv6_net" {
+  type = string
+  default = "2a0e:97c0:ae2:2501" # Expects network part of /64
+}
+variable "proxmox_vm_storage" {
+  type = string
+  default = "nas_v6"
+}
 variable "vm_user_username" {
     type = string
     default = "" # Should look something root@pam

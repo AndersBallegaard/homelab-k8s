@@ -7,6 +7,7 @@ This script uses git over SSH, so make sure the admin node have ssh keys created
 
 The script does the following
 - Installs openTofu
+- Installs Ansible
 - Installs git
 - Downloads this repository
 ```bash
@@ -56,4 +57,8 @@ tofu plan
 
 # Provision machines
 tofu apply
+```
+## Verify that ansible inventory is generated
+```bash
+ansible-inventory -i inventory.yml --graph --vars
 ```
