@@ -1,0 +1,7 @@
+---
+# vars file for proxmox_vm
+install_packages:
+  - vim
+  - htop
+  - tmux
+  - net-tools

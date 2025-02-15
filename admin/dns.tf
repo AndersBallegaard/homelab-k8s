@@ -43,3 +43,21 @@ resource "cloudflare_dns_record" "worker_c_dns" {
   content = "2a0e:97c0:ae2:2501::c1c${count.index}"
   ttl = 300
 }
+resource "cloudflare_dns_record" "ctrl_vip_a_dns" {
+  zone_id = var.cloudflare_zone_id
+  count = var.k8s_ctrl_node_a
+  proxied = false
+  name = "ctrl.${var.vm_dns_suffix}"
+  type = "AAAA"
+  content = "2a0e:97c0:ae2:2501::a0c${count.index}"
+  ttl = 300
+}
+resource "cloudflare_dns_record" "ctrl_vip_b_dns" {
+  zone_id = var.cloudflare_zone_id
+  count = var.k8s_ctrl_node_b
+  proxied = false
+  name = "ctrl.${var.vm_dns_suffix}"
+  type = "AAAA"
+  content = "2a0e:97c0:ae2:2501::b0c${count.index}"
+  ttl = 300
+}
