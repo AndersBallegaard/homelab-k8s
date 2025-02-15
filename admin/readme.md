@@ -34,11 +34,26 @@ qm move_disk 9024 scsi0 nas_v6
 source ~/.bashrc
 
 # Set proxmox authentication variables
-export proxmox_username=root@pam # Replace with correct user
-export proxmox_password=bad_password123 # Replace with correct password
+export TF_VAR_proxmox_username=root@pam # Replace with correct user
+export TF_VAR_proxmox_password=bad_password123 # Replace with correct password
 
 # Set cloud init credentials
-export vm_user_username=anders 
-export vm_user_sshkey="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIHoVbRHKFBt8xP5Khw6T1togRM2oo6VRx+URB2iQ83+ anders@jumphost"
+export TF_VAR_vm_user_username=anders 
+export TF_VAR_vm_user_sshkey="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIHoVbRHKFBt8xP5Khw6T1togRM2oo6VRx+URB2iQ83+ anders@jumphost"
 
+# Set cloudflare credentials, needs privileges to edit the DNS zone in vm_dns_suffix
+export TF_VAR_cloudflare_api_token=fakekey
+
+# Download snippet
+cd /mnt/pve/nas_v6/snippets/
+wget https://raw.githubusercontent.com/AndersBallegaard/homelab-k8s/refs/heads/main/admin/resources/ubuntu24-cloud-init-snippet.yml
+
+cd admin
+tofu init
+
+# View planned changes
+tofu plan
+
+# Provision machines
+tofu apply
 ```

@@ -1,1 +1,4 @@
-
+admin/.terraform*
+*.tfstate.*
+*.tfstate
+*.env
