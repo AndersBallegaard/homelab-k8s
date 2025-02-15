@@ -3,11 +3,6 @@ echo "Wellcome to the srv6.dk admin node preperation script"
 echo "This script will automaticly prepare this system to act as an admin node for the homelab"
 echo "This script expects a node based on ubuntu, but similar distros may also work"
 
-# Check that we have root privileges
-if [ "$EUID" -ne 0 ]
-  then echo "Please run this script with sudo"
-  exit
-fi
 
 BASEDIR=$(pwd)
 
