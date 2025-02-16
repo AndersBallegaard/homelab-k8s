@@ -6,13 +6,12 @@ resource "proxmox_vm_qemu" "worker_vmhost_a" {
   agent       = 1
   cores       = var.k8s_worker_cpu_count
   memory      = var.k8s_worker_mem_mb
-  boot        = "order=scsi0" 
-  clone       = "ubuntu24-template"
+  boot        = "order=scsi0;ide2" 
+  clone       = "talos-template"
   scsihw      = "virtio-scsi-single"
   vm_state    = "running"
   automatic_reboot = true
 
-  cicustom   = "vendor=nas_v6:snippets/ubuntu24-cloud-init-snippet.yml"
   ciupgrade  = true
   nameserver = "2a0e:97c0:ae1:: 1.1.1.1"
   ipconfig0  = "ip=${var.proxmox_ipv4_net}.11${count.index}/24,gw=${var.proxmox_ipv4_net}.1,ip6=${var.proxmox_ipv6_net}::a1c${count.index}/64,gw6=${var.proxmox_ipv6_net}::1"
@@ -41,6 +40,11 @@ resource "proxmox_vm_qemu" "worker_vmhost_a" {
           storage = "${var.proxmox_vm_storage}"
         }
       }
+      ide2 {
+        cdrom {
+          iso = "${var.proxmox_vm_storage}:iso/talos-nocloud-amd64.iso"
+        }
+      }
     }
   }
 
@@ -58,13 +62,12 @@ resource "proxmox_vm_qemu" "worker_vmhost_b" {
   agent       = 1
   cores       = var.k8s_worker_cpu_count
   memory      = var.k8s_worker_mem_mb
-  boot        = "order=scsi0" 
-  clone       = "ubuntu24-template"
+  boot        = "order=scsi0;ide2" 
+  clone       = "talos-template"
   scsihw      = "virtio-scsi-single"
   vm_state    = "running"
   automatic_reboot = true
 
-  cicustom   = "vendor=nas_v6:snippets/ubuntu24-cloud-init-snippet.yml"
   ciupgrade  = true
   nameserver = "2a0e:97c0:ae1:: 1.1.1.1"
   ipconfig0  = "ip=${var.proxmox_ipv4_net}.12${count.index}/24,gw=${var.proxmox_ipv4_net}.1,ip6=${var.proxmox_ipv6_net}::b1c${count.index}/64,gw6=${var.proxmox_ipv6_net}::1"
@@ -93,6 +96,11 @@ resource "proxmox_vm_qemu" "worker_vmhost_b" {
           storage = "${var.proxmox_vm_storage}"
         }
       }
+      ide2 {
+        cdrom {
+          iso = "${var.proxmox_vm_storage}:iso/talos-nocloud-amd64.iso"
+        }
+      }
     }
   }
 
@@ -106,17 +114,16 @@ resource "proxmox_vm_qemu" "worker_vmhost_c" {
   count = var.k8s_worker_node_c
   vmid        = "623${count.index}"
   name        = "worker-c-${count.index}.${var.vm_dns_suffix}"
-  target_node = var.proxmox_target_node_a
+  target_node = var.proxmox_target_node_c
   agent       = 1
   cores       = var.k8s_worker_cpu_count
   memory      = var.k8s_worker_mem_mb
-  boot        = "order=scsi0" 
-  clone       = "ubuntu24-template"
+  boot        = "order=scsi0;ide2" 
+  clone       = "talos-template"
   scsihw      = "virtio-scsi-single"
   vm_state    = "running"
   automatic_reboot = true
 
-  cicustom   = "vendor=nas_v6:snippets/ubuntu24-cloud-init-snippet.yml"
   ciupgrade  = true
   nameserver = "2a0e:97c0:ae1:: 1.1.1.1"
   ipconfig0  = "ip=${var.proxmox_ipv4_net}.13${count.index}/24,gw=${var.proxmox_ipv4_net}.1,ip6=${var.proxmox_ipv6_net}::c1c${count.index}/64,gw6=${var.proxmox_ipv6_net}::1"
@@ -143,6 +150,11 @@ resource "proxmox_vm_qemu" "worker_vmhost_c" {
       ide1 {
         cloudinit {
           storage = "${var.proxmox_vm_storage}"
+        }
+      }
+      ide2 {
+        cdrom {
+          iso = "${var.proxmox_vm_storage}:iso/talos-nocloud-amd64.iso"
         }
       }
     }

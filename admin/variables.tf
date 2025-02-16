@@ -54,6 +54,10 @@ variable "k8s_ctrl_node_b" {
     type = number
     default = 1
 }
+variable "k8s_ctrl_node_c" {
+    type = number
+    default = 1
+}
 variable "k8s_worker_node_a" {
     type = number
     default = 1
@@ -94,4 +98,12 @@ variable "cloudflare_api_token" {
 variable "cloudflare_zone_id" {
   type = string
   default = "" # Should be zoneid matching vm_dns_suffix
+}
+variable "talos_cluster_name" {
+  type = string
+  default = "homelab"
+}
+variable "talos_cluster_endpoint_prefix" {
+  type = string
+  default = "ctrl"
 }

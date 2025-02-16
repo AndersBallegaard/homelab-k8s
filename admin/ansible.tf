@@ -14,6 +14,14 @@ resource "ansible_host" "ctrl_b" {
         ansible_user = var.vm_user_username
     }
 }
+resource "ansible_host" "ctrl_c" {
+    count = var.k8s_ctrl_node_c
+    name = "ctrl-c-${count.index}.${var.vm_dns_suffix}"
+    groups = ["k8s_ctrl", "proxmox_vm"]
+    variables = {
+        ansible_user = var.vm_user_username
+    }
+}
 resource "ansible_host" "worker_a" {
     count = var.k8s_worker_node_a
     name = "worker-a-${count.index}.${var.vm_dns_suffix}"

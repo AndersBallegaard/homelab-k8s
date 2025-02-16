@@ -3,4 +3,6 @@ admin/.terraform*
 *.tfstate
 *.env
 admin/ext*
-admin/ansible-secrets
+admin/*secrets*
+admin/configs/*.yaml
+admin/configs/*config

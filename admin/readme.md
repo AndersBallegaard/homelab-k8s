@@ -10,23 +10,26 @@ The script does the following
 - Installs Ansible
 - Installs git
 - Downloads this repository
-- Download k3s ansible roles
+- Installs talosctl
+- Installs kubectl
 ```bash
 curl --proto '=https' --tlsv1.2 -fsSL https://raw.githubusercontent.com/AndersBallegaard/homelab-k8s/refs/heads/main/admin/prepare_admin_node.sh | bash
 ```
 
 ## Prepare proxmox for cloudinit
-In case proxmox isn't ready for cloudinit of ubuntu 24.04, this is how to set it up. All these commands should be run from a proxmox node
+In case proxmox isn't ready for cloudinit of talos, this is how to set it up. Currently this is done from the proxmox UI as a one of thing
 ```bash
-cd /tmp
-wget https://cloud-images.ubuntu.com/noble/current/noble-server-cloudimg-amd64.img
-qm create 9024 --name ubuntu24-template
-# We use local storage right now, because it doesn't seem to like templating a VM using network storage
-qm set 9024 --scsi0 local:0,import-from=/tmp/noble-server-cloudimg-amd64.img
-qm template 9024
-# Move storage to network for node independant deployment
-# /usr/bin/chattr +i will probably fail if using synology nas as shared storage, in the words of a proxmox emploee on the forum "while this is not optimal, it should not affect operation in any way (as long as no one messes with this file)"
-qm move_disk 9024 scsi0 nas_v6
+# Download a talos image from the talos image factory, it needs to be a nocloud image
+# The image should be placed under the name "talos-nocloud-amd64.iso" in the shared vm datastore
+
+# Create a VM with the 1g disk on shared storage, and attach the iso. Ram and CPU doesn't matter
+# Don't start the VM
+# The vm MUST be named talos-template, and should have the ID 9100
+# CPU Type should be host for best performace
+# Disk size is intentionally below recormendations for faster template deployments, cloud init will resize to whatever the VM is speced for
+#
+# Convert VM to template
+
 ```
 
 ## Provision k3s VM's
@@ -59,17 +62,45 @@ tofu plan
 # Provision machines
 tofu apply
 ```
-## Verify that ansible inventory is generated
+
+## Setup Talos
 ```bash
-ansible-inventory -i inventory.yml --graph --vars
-```
+# Go to the admin/talos dir
+mkdir talos
+cd talos
+# Generate secrets
+talosctl gen secrets -o secrets.yaml
 
-## Configure VMs
-```bash
+# Generate cluster config
+talosctl gen config --dns-domain k8s.srv6.dk --additional-sans ctrl.k8s.srv6.dk --with-secrets secrets.yaml homelab https://ctrl.k8s.srv6.dk:6443
+
+# Modify config files
+#
+# In both files the following should be changed:
+# cluster/podSubnet should be 10.201.0.0/16 and 2a0e:97c0:ae2:c200::/56
+# cluster/ServiceSubnet should be 10.200.0.0/20 and 2a0e:97c0:ae2:c100::1:0/112
+vim controlplane.yaml
+vim worker.yaml
+
+# Start install
+export CTRL_PER_NODE=1
+export WORKER_PER_NODE=1
+for node in a b c;do
+    for (( i=0; i<$CTRL_PER_NODE; i++ ));do
+        echo "ctrl-$node-$i.k8s.srv6.dk"
+        talosctl apply-config --insecure --nodes ctrl-$node-$i.k8s.srv6.dk --file controlplane.yaml
+    done
+    for (( i=0; i<$WORKER_PER_NODE; i++ ));do
+        echo "worker-$node-$i.k8s.srv6.dk"
+        talosctl apply-config --insecure --nodes worker-$node-$i.k8s.srv6.dk --file worker.yaml
+    done
+done
+
+# Prepare talos config file, specify atleast two ctrl plane nodes for redundancy. 
+talosctl --talosconfig=./talosconfig config endpoint ctrl.k8s.srv6.dk 
+talosctl config merge ./talosconfig
 
 
-# Perform baseline install of all nodes
-ansible-playbook -i inventory.yml playbooks/prepare_nodes.yml
-
-
+# Wait for nodes to reboot and install
+talosctl bootstrap --nodes ctrl.k8s.srv6.dk
 ```

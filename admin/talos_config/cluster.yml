@@ -1,0 +1,16 @@
+---
+machine:
+    certSANs:
+        - ctrl.k8s.srv6.dk
+cluster:
+    controlPlane:
+    network:
+        podSubnets:
+            - 10.201.0.0/16
+            - 2a0e:97c0:ae2:c200::/56
+        serviceSubnets:
+            - 10.200.0.0/20
+            - 2a0e:97c0:ae2:c100::1:0/112
+    apiServer:
+        certSANs: ["ctrl.k8s.srv6.dk"]
+          
