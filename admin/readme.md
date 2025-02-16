@@ -31,7 +31,7 @@ In case proxmox isn't ready for cloudinit of talos, this is how to set it up. Cu
 
 ```
 
-## Provision k3s VM's
+## Provision Cluster
 ```bash
 # Set constant variables
 ./configure_variables.sh
@@ -64,42 +64,6 @@ tofu apply
 
 ## Setup Talos
 ```bash
-# Go to the admin/talos dir
-mkdir talos
-cd talos
-# Generate secrets
-talosctl gen secrets -o secrets.yaml
-
-# Generate cluster config
-talosctl gen config --dns-domain k8s.srv6.dk --additional-sans ctrl.k8s.srv6.dk --with-secrets secrets.yaml homelab https://ctrl.k8s.srv6.dk:6443
-
-# Modify config files
-#
-# In both files the following should be changed:
-# cluster/podSubnet should be 10.201.0.0/16 and 2a0e:97c0:ae2:c200::/56
-# cluster/ServiceSubnet should be 10.200.0.0/20 and 2a0e:97c0:ae2:c100::1:0/112
-vim controlplane.yaml
-vim worker.yaml
-
-# Start install
-export CTRL_PER_NODE=1
-export WORKER_PER_NODE=1
-for node in a b c;do
-    for (( i=0; i<$CTRL_PER_NODE; i++ ));do
-        echo "ctrl-$node-$i.k8s.srv6.dk"
-        talosctl apply-config --insecure --nodes ctrl-$node-$i.k8s.srv6.dk --file controlplane.yaml
-    done
-    for (( i=0; i<$WORKER_PER_NODE; i++ ));do
-        echo "worker-$node-$i.k8s.srv6.dk"
-        talosctl apply-config --insecure --nodes worker-$node-$i.k8s.srv6.dk --file worker.yaml
-    done
-done
-
-# Prepare talos config file, specify atleast two ctrl plane nodes for redundancy. 
-talosctl --talosconfig=./talosconfig config endpoint ctrl.k8s.srv6.dk 
-talosctl config merge ./talosconfig
-
-
-# Wait for nodes to reboot and install
-talosctl bootstrap --nodes ctrl.k8s.srv6.dk
+talosctl config merge configs/talosconfig 
+talosctl -n ctrl.k8s.srv6.dk kubeconfig
 ```

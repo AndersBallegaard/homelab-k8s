@@ -76,7 +76,7 @@ variable "k8s_ctrl_cpu_count" {
 }
 variable "k8s_ctrl_mem_mb" {
     type = number
-    default = 1024
+    default = 2048
 }
 
 variable "k8s_worker_cpu_count" {
