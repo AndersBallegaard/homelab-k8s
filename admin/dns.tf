@@ -61,3 +61,39 @@ resource "cloudflare_dns_record" "ctrl_vip_b_dns" {
   content = "2a0e:97c0:ae2:2501::b0c${count.index}"
   ttl = 300
 }
+resource "cloudflare_dns_record" "svc_vip_a" {
+  zone_id = var.cloudflare_zone_id
+  count = var.k8s_worker_node_a
+  proxied = false
+  name = "vip.${var.vm_dns_suffix}"
+  type = "AAAA"
+  content = "2a0e:97c0:ae2:2501::a1c${count.index}"
+  ttl = 300
+}
+resource "cloudflare_dns_record" "svc_vip_b" {
+  zone_id = var.cloudflare_zone_id
+  count = var.k8s_worker_node_b
+  proxied = false
+  name = "vip.${var.vm_dns_suffix}"
+  type = "AAAA"
+  content = "2a0e:97c0:ae2:2501::b1c${count.index}"
+  ttl = 300
+}
+resource "cloudflare_dns_record" "svc_vip_c" {
+  zone_id = var.cloudflare_zone_id
+  count = var.k8s_worker_node_b
+  proxied = false
+  name = "vip.${var.vm_dns_suffix}"
+  type = "AAAA"
+  content = "2a0e:97c0:ae2:2501::c1c${count.index}"
+  ttl = 300
+}
+resource "cloudflare_dns_record" "svc_ext_vip" {
+  zone_id = var.cloudflare_zone_id
+  count = var.k8s_worker_node_b
+  proxied = true
+  name = "ext-vip.${var.vm_dns_suffix}"
+  type = "CNAME"
+  content = "vip.${var.vm_dns_suffix}"
+  ttl = 1
+}

@@ -1,7 +1,0 @@
-- name: Apply baseline configuration to all VM's
-  hosts: proxmox_vm
-  gather_facts: yes
-  tasks:
-    - name: Apply proxmox_vm baseline role
-      import_role:
-        name: ../roles/proxmox_vm

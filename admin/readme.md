@@ -10,6 +10,7 @@ The script does the following
 - Installs Ansible
 - Installs git
 - Downloads this repository
+- Download k3s ansible roles
 ```bash
 curl --proto '=https' --tlsv1.2 -fsSL https://raw.githubusercontent.com/AndersBallegaard/homelab-k8s/refs/heads/main/admin/prepare_admin_node.sh | bash
 ```
@@ -63,7 +64,12 @@ tofu apply
 ansible-inventory -i inventory.yml --graph --vars
 ```
 
-## Perform VM Baseline configuration
-```
-ansible-playbook -i inventory.yml playbooks/baseline_vm.yml
+## Configure VMs
+```bash
+
+
+# Perform baseline install of all nodes
+ansible-playbook -i inventory.yml playbooks/prepare_nodes.yml
+
+
 ```

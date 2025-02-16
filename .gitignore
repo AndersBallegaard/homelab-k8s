@@ -2,3 +2,5 @@ admin/.terraform*
 *.tfstate.*
 *.tfstate
 *.env
+admin/ext*
+admin/ansible-secrets
