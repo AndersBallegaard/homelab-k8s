@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: traefik
-  namespace: kube-system
+  namespace: traefik
   labels:
     app.kubernetes.io/instance: traefik
     app.kubernetes.io/name: traefik
