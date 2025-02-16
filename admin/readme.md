@@ -11,6 +11,7 @@ The script does the following
 - Downloads this repository
 - Installs talosctl
 - Installs kubectl
+- Installs helm
 ```bash
 curl --proto '=https' --tlsv1.2 -fsSL https://raw.githubusercontent.com/AndersBallegaard/homelab-k8s/refs/heads/main/admin/prepare_admin_node.sh | bash
 ```

@@ -65,7 +65,7 @@ resource "talos_machine_bootstrap" "this" {
   node = "${var.talos_cluster_endpoint_prefix}.${var.vm_dns_suffix}"
   client_configuration = talos_machine_secrets.this.client_configuration
 }
-data "talos_cluster_kubeconfig" "this" {
+resource "talos_cluster_kubeconfig" "this" {
   depends_on = [ talos_machine_bootstrap.this ]
   client_configuration = talos_machine_secrets.this.client_configuration
   node = "${var.talos_cluster_endpoint_prefix}.${var.vm_dns_suffix}"
@@ -79,14 +79,14 @@ resource "time_sleep" "wait_until_bootstrap" {
   create_duration = "5m"
 }
 resource "local_file" "talosconfig" {
-    depends_on = [ data.talos_cluster_kubeconfig.this ]
+    depends_on = [ talos_cluster_kubeconfig.this ]
     content = data.talos_client_configuration.this.talos_config
     filename = "configs/talosconfig"
 }
 
 resource "local_file" "kubeconfig" {
-    depends_on = [ data.talos_cluster_kubeconfig.this ]
-    content = data.talos_cluster_kubeconfig.this.kubeconfig_raw
+    depends_on = [ talos_cluster_kubeconfig.this ]
+    content = talos_cluster_kubeconfig.this.kubeconfig_raw
     filename = "configs/kubeconfig"
 }
 

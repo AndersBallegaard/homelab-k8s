@@ -1,0 +1,55 @@
+annotateK8sNode: true
+autoDirectNodeRoutes: true
+bgpControlPlane:
+  enabled: true
+bpf:
+  hostLegacyRouting: false
+  masquerade: true
+cgroup:
+  autoMount:
+    enabled: true
+  hostRoot: /run/cilium/cgroupv2
+cluster:
+  name: cilium-cluster
+debug:
+  enabled: false
+enableIPv6BIGTCP: true
+enableIPv6Masquerade: true
+externalIPs:
+  enabled: true
+gatewayAPI:
+  enabled: true
+hostPort:
+  enabled: true
+hostServices:
+  enabled: false
+hubble:
+  relay:
+    enabled: true
+  tls:
+    auto:
+      certValidityDuration: 1095
+      enabled: true
+      method: helm
+  ui:
+    enabled: true
+image:
+  pullPolicy: IfNotPresent
+ingressController:
+  default: false
+  enabled: false
+ipam:
+  mode: kubernetes
+ipv4:
+  enabled: true
+ipv6:
+  enabled: true
+k8s:
+  requireIPv4PodCIDR: false
+  requireIPv6PodCIDR: true
+kubeProxyReplacement: "true"
+nodePort:
+  enabled: true
+operator:
+  replicas: 1
+routingMode: native

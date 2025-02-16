@@ -12,6 +12,7 @@ terraform {
       source = "siderolabs/talos"
       version = "0.7.1"
     }
+    
   }
 }
 
@@ -25,3 +26,4 @@ provider "proxmox" {
 provider "cloudflare" {
   api_token = var.cloudflare_api_token
 }
+
