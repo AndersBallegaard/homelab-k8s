@@ -1,6 +1,6 @@
 resource "proxmox_vm_qemu" "ctrl_vmhost_a" {
   count = var.k8s_ctrl_node_a
-  vmid        = "611${count.index}"
+  vmid        = "511${count.index}"
   name        = "ctrl-a-${count.index}.${var.vm_dns_suffix}"
   target_node = var.proxmox_target_node_a
   agent       = 1
@@ -42,7 +42,7 @@ resource "proxmox_vm_qemu" "ctrl_vmhost_a" {
       }
       ide2 {
         cdrom {
-          iso = "${var.proxmox_vm_storage}:iso/talos-nocloud-amd64.iso"
+          iso = "${var.proxmox_iso_storage}:iso/talos-nocloud-amd64.iso"
         }
       }
     }
@@ -56,7 +56,7 @@ resource "proxmox_vm_qemu" "ctrl_vmhost_a" {
 }
 resource "proxmox_vm_qemu" "ctrl_vmhost_b" {
   count = var.k8s_ctrl_node_b
-  vmid        = "612${count.index}"
+  vmid        = "512${count.index}"
   name        = "ctrl-b-${count.index}.${var.vm_dns_suffix}"
   target_node = var.proxmox_target_node_b
   agent       = 1
@@ -98,7 +98,7 @@ resource "proxmox_vm_qemu" "ctrl_vmhost_b" {
       }
       ide2 {
         cdrom {
-          iso = "${var.proxmox_vm_storage}:iso/talos-nocloud-amd64.iso"
+          iso = "${var.proxmox_iso_storage}:iso/talos-nocloud-amd64.iso"
         }
       }
     }
@@ -112,7 +112,7 @@ resource "proxmox_vm_qemu" "ctrl_vmhost_b" {
 }
 resource "proxmox_vm_qemu" "ctrl_vmhost_c" {
   count = var.k8s_ctrl_node_c
-  vmid        = "613${count.index}"
+  vmid        = "513${count.index}"
   name        = "ctrl-c-${count.index}.${var.vm_dns_suffix}"
   target_node = var.proxmox_target_node_c
   agent       = 1
@@ -154,7 +154,7 @@ resource "proxmox_vm_qemu" "ctrl_vmhost_c" {
       }
       ide2 {
         cdrom {
-          iso = "${var.proxmox_vm_storage}:iso/talos-nocloud-amd64.iso"
+          iso = "${var.proxmox_iso_storage}:iso/talos-nocloud-amd64.iso"
         }
       }
     }

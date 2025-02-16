@@ -12,6 +12,7 @@ The script does the following
 - Installs talosctl
 - Installs kubectl
 - Installs helm
+- Installs flux
 ```bash
 curl --proto '=https' --tlsv1.2 -fsSL https://raw.githubusercontent.com/AndersBallegaard/homelab-k8s/refs/heads/main/admin/prepare_admin_node.sh | bash
 ```
@@ -65,6 +66,21 @@ tofu apply
 
 ## Setup Talos
 ```bash
+# Clean any previous config
+rm -rf ~/.kube
+rm -rf ~/.talos
+
 talosctl config merge configs/talosconfig 
 talosctl -n ctrl.k8s.srv6.dk kubeconfig
+```
+
+## Setup fluxCD
+```bash
+flux bootstrap github \
+  --token-auth \
+  --owner=andersballegaard \
+  --repository=homelab-k8s \
+  --branch=main \
+  --path=cluster \
+  --personal
 ```

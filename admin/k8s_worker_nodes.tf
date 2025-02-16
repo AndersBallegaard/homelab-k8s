@@ -1,6 +1,6 @@
 resource "proxmox_vm_qemu" "worker_vmhost_a" {
   count = var.k8s_worker_node_a
-  vmid        = "621${count.index}"
+  vmid        = "521${count.index}"
   name        = "worker-a-${count.index}.${var.vm_dns_suffix}"
   target_node = var.proxmox_target_node_a
   agent       = 1
@@ -42,7 +42,7 @@ resource "proxmox_vm_qemu" "worker_vmhost_a" {
       }
       ide2 {
         cdrom {
-          iso = "${var.proxmox_vm_storage}:iso/talos-nocloud-amd64.iso"
+          iso = "${var.proxmox_iso_storage}:iso/talos-nocloud-amd64.iso"
         }
       }
     }
@@ -56,7 +56,7 @@ resource "proxmox_vm_qemu" "worker_vmhost_a" {
 }
 resource "proxmox_vm_qemu" "worker_vmhost_b" {
   count = var.k8s_worker_node_b
-  vmid        = "622${count.index}"
+  vmid        = "522${count.index}"
   name        = "worker-b-${count.index}.${var.vm_dns_suffix}"
   target_node = var.proxmox_target_node_b
   agent       = 1
@@ -98,7 +98,7 @@ resource "proxmox_vm_qemu" "worker_vmhost_b" {
       }
       ide2 {
         cdrom {
-          iso = "${var.proxmox_vm_storage}:iso/talos-nocloud-amd64.iso"
+          iso = "${var.proxmox_iso_storage}:iso/talos-nocloud-amd64.iso"
         }
       }
     }
@@ -112,7 +112,7 @@ resource "proxmox_vm_qemu" "worker_vmhost_b" {
 }
 resource "proxmox_vm_qemu" "worker_vmhost_c" {
   count = var.k8s_worker_node_c
-  vmid        = "623${count.index}"
+  vmid        = "523${count.index}"
   name        = "worker-c-${count.index}.${var.vm_dns_suffix}"
   target_node = var.proxmox_target_node_c
   agent       = 1
@@ -154,7 +154,7 @@ resource "proxmox_vm_qemu" "worker_vmhost_c" {
       }
       ide2 {
         cdrom {
-          iso = "${var.proxmox_vm_storage}:iso/talos-nocloud-amd64.iso"
+          iso = "${var.proxmox_iso_storage}:iso/talos-nocloud-amd64.iso"
         }
       }
     }

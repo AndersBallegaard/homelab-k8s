@@ -11,8 +11,6 @@ machine:
 cluster:
     
     network:
-        cni:
-          name: none
         podSubnets:
             - 10.201.0.0/16
             - 2a0e:97c0:ae2:c200::/56

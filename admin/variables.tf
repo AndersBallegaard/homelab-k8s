@@ -36,15 +36,20 @@ variable "proxmox_ipv6_net" {
 }
 variable "proxmox_vm_storage" {
   type = string
+  default = "local"
+}
+variable "proxmox_iso_storage" {
+  type = string
   default = "nas_v6"
 }
+
 variable "vm_user_username" {
     type = string
-    default = "" # Should look something root@pam
+    default = "" # Should look something 'user'
 }
 variable "vm_user_sshkey" {
     type = string
-    default = "" # Should look something badpassword123
+    default = "" 
 }
 variable "k8s_ctrl_node_a" {
     type = number
@@ -81,11 +86,11 @@ variable "k8s_ctrl_mem_mb" {
 
 variable "k8s_worker_cpu_count" {
     type = number
-    default = 2
+    default = 4
 }
 variable "k8s_worker_mem_mb" {
     type = number
-    default = 4096
+    default = 8192
 }
 variable "vm_dns_suffix" {
   type = string
