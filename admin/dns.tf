@@ -115,3 +115,13 @@ resource "cloudflare_dns_record" "svc_ext_vip" {
   content = "vip.${var.vm_dns_suffix}"
   ttl = 1
 }
+resource "cloudflare_dns_record" "map_cluster_domain_to_workers" {
+  zone_id = var.cloudflare_zone_id
+  count = var.k8s_worker_node_b
+  proxied = true
+  name = "${var.vm_dns_suffix}"
+  type = "CNAME"
+  content = "vip.${var.vm_dns_suffix}"
+  ttl = 1
+}
+
