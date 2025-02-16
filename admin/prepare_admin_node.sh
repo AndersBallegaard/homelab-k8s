@@ -3,8 +3,7 @@ echo "Wellcome to the srv6.dk admin node preperation script"
 echo "This script will automaticly prepare this system to act as an admin node for the homelab"
 echo "This script expects a node based on ubuntu, but similar distros may also work"
 
-sudo apt-add-repository ppa:ansible/ansible -y
-sudo apt install -y git ansible
+sudo apt install -y git
 git clone git@github.com:AndersBallegaard/homelab-k8s.git
 
 cd /tmp

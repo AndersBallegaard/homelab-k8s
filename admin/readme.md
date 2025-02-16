@@ -7,7 +7,6 @@ This script uses git over SSH, so make sure the admin node have ssh keys created
 
 The script does the following
 - Installs openTofu
-- Installs Ansible
 - Installs git
 - Downloads this repository
 - Installs talosctl

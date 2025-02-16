@@ -8,10 +8,6 @@ terraform {
       source  = "cloudflare/cloudflare"
       version = "~> 5"
     }
-    ansible = {
-      source = "ansible/ansible"
-      version = "1.3.0"
-    }
     talos = {
       source = "siderolabs/talos"
       version = "0.5.0"
