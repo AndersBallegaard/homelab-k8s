@@ -2,6 +2,12 @@
 machine:
     certSANs:
         - ctrl.k8s.srv6.dk
+    kubelet:
+      nodeIP:
+        validSubnets:
+          - 10.25.1.0/24
+          - 2a0e:97c0:ae2:2501::/64
+          - fe80::/16
 cluster:
     controlPlane:
     network:

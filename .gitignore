@@ -6,3 +6,4 @@ admin/ext*
 admin/*secrets*
 admin/configs/*.yaml
 admin/configs/*config
+*tmp*
