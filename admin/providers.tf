@@ -12,6 +12,11 @@ terraform {
       source = "siderolabs/talos"
       version = "0.7.1"
     }
+    helm = {
+      source = "hashicorp/helm"
+      version = "2.13.2"
+    }
+    
   }
 }
 
@@ -26,3 +31,8 @@ provider "cloudflare" {
   api_token = var.cloudflare_api_token
 }
 
+provider "helm" {
+  kubernetes {
+    config_path = "${path.root}/configs/kubeconfig"
+  }
+}

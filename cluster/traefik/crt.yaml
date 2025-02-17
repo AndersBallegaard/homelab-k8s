@@ -1,0 +1,8 @@
+certificatesResolvers:
+  letsencrypt:
+    acme:
+      email: letsencrypt@srv6.dk
+      storage: acme.json
+      httpChallenge:
+        # used during the challenge
+        entryPoint: web

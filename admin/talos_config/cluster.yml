@@ -9,8 +9,11 @@ machine:
           - 2a0e:97c0:ae2:2501::/64
           - fe80::/16
 cluster:
-    
+    proxy:
+        disabled: true
     network:
+        cni:
+            name: none
         dnsDomain: k8s.srv6.dk
         podSubnets:
             - 10.201.0.0/16
