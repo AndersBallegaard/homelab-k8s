@@ -1,0 +1,39 @@
+ipam:
+  mode: kubernetes
+hostFirewall:
+  enabled: true
+hubble:
+  ui:
+    enabled: true
+  relay:
+    enabled: true
+  peerService:
+    clusterDomain: k8s.srv6.dk
+kubeProxyReplacement: true
+k8sServiceHost: "ctrl.k8s.srv6.dk"
+k8sServicePort: "6443"
+ipv6:
+  enabled: true
+securityContext:
+  privileged: true
+#   capabilities:
+#     ciliumAgent:
+#       - CHOWN
+#       - KILL
+#       - NET_ADMIN
+#       - NET_RAW
+#       - IPC_LOCK
+#       - SYS_ADMIN
+#       - SYS_RESOURCE
+#       - DAC_OVERRIDE
+#       - FOWNER
+#       - SETGID
+#       - SETUID
+#     ciliumAgent:
+#       - NET_ADMIN
+#       - SYS_ADMIN
+#       - SYS_RESOURCE
+# cgroup:
+#   autoMount:
+#     enabled: false
+#   hostRoot: /sys/fs/

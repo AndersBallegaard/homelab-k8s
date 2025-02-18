@@ -21,7 +21,6 @@ data "talos_machine_configuration" "masters" {
   machine_secrets = talos_machine_secrets.this.machine_secrets
   config_patches = [
     file("${path.root}/talos_config/cluster.yml"),
-    file("${path.root}/talos_config/cilium-cni-patch.yaml")
   ]
 }
 
@@ -33,7 +32,6 @@ data "talos_machine_configuration" "workers" {
   machine_secrets = talos_machine_secrets.this.machine_secrets
   config_patches = [
     file("${path.root}/talos_config/cluster.yml"),
-    file("${path.root}/talos_config/cilium-cni-patch.yaml")
   ]
 }
 

@@ -28,3 +28,6 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 # Install flux
 curl -s https://fluxcd.io/install.sh | sudo bash
+
+# Touch this fucking file, this is needed because terraform expects something to exist, and when generated the file will contain secrets, so it can't be commited to git in any usable form
+touch talos_config/cilium-cni-patch.yaml

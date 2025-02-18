@@ -1,0 +1,6 @@
+- Get cilium or another CNI with BGP support working
+- BGP peer with either lab directly, or move networking to AS201911 control
+- Try to hit full K8S conformity https://github.com/cncf/k8s-conformance/blob/master/instructions.md # Include results in this repo
+- Write and test upgrade strategies
+- Deploy kubevirt
+- Migrate LXC services from proxmox to K8S
