@@ -6,4 +6,4 @@ resources:
   - rbac.yaml
   - deployment.yaml
   - svc.yaml
-  - crt.sh
+  - crt.yaml
