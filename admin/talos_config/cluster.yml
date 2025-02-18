@@ -14,7 +14,8 @@ cluster:
     network:
         cni:
             name: none
-        dnsDomain: k8s.srv6.dk
+        # Commented out due to k8s conformety testing not expecting a custom domain, and general assumption in the ecosystem of default domain
+        # dnsDomain: k8s.srv6.dk
         podSubnets:
             - 10.201.0.0/16
             - 2a0e:97c0:ae2:c200::/56

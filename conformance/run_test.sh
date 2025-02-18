@@ -10,3 +10,5 @@ mkdir ./results; tar xzf $outfile -C ./results
 rm -rf ${k8s_version}
 mkdir -p ./${k8s_version}/${prod_name}
 cp ./results/plugins/e2e/results/global/* ./${k8s_version}/${prod_name}/
+
+echo "Remember to commit these results, please specify if it was done as part of an upgrade, cluster rebuild, or improvement"
