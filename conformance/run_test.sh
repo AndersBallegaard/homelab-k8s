@@ -4,8 +4,8 @@ prod_name=srv6-homelab
 
 go install github.com/vmware-tanzu/sonobuoy@latest
 
-sonobuoy run --mode=certified-conformance --wait
-outfile=$(sonobuoy retrieve)
+~/go/bin/sonobuoy run --mode=certified-conformance --wait
+outfile=$(~/go/bin/sonobuoy retrieve)
 mkdir ./results; tar xzf $outfile -C ./results
 rm -rf ${k8s_version}
 mkdir -p ./${k8s_version}/${prod_name}
