@@ -90,6 +90,5 @@ flux bootstrap github \
   --repository=homelab-k8s \
   --branch=main \
   --path=cluster \
-  --cluster-domain k8s.srv6.dk \
   --personal
 ```
