@@ -7,8 +7,8 @@ hubble:
     enabled: true
   relay:
     enabled: true
-  peerService:
-    clusterDomain: k8s.srv6.dk
+  # peerService:
+  #   clusterDomain: k8s.srv6.dk
 kubeProxyReplacement: true
 k8sServiceHost: "ctrl.k8s.srv6.dk"
 k8sServicePort: "6443"
