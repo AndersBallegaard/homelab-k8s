@@ -6,6 +6,7 @@ metadata:
 spec:
   interval: 5m0s
   url: https://charts.rook.io/release
+---
 apiVersion: v1
 kind: Namespace
 metadata:
