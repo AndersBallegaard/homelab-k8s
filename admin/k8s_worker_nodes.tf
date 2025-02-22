@@ -29,7 +29,7 @@ resource "proxmox_vm_qemu" "worker_vmhost_a" {
         disk {
           storage = "${var.proxmox_vm_storage}"
           # The size of the disk should be at least as big as the disk in the template. If it's smaller, the disk will be recreated
-          size    = "10G" 
+          size    = "200G" 
         }
       }
     }
@@ -88,6 +88,13 @@ resource "proxmox_vm_qemu" "worker_vmhost_b" {
           size    = "10G" 
         }
       }
+      scsi1 {
+        # Storage for rook
+        disk {
+          storage = "${var.proxmox_data_storage}"
+          size    = "150G" 
+        }
+      }
     }
     ide {
       # Some images require a cloud-init disk on the IDE controller, others on the SCSI or SATA controller
@@ -144,6 +151,14 @@ resource "proxmox_vm_qemu" "worker_vmhost_c" {
           size    = "10G" 
         }
       }
+      scsi1 {
+        # Storage for rook
+        disk {
+          storage = "${var.proxmox_data_storage}"
+          size    = "150G" 
+        }
+      }
+
     }
     ide {
       # Some images require a cloud-init disk on the IDE controller, others on the SCSI or SATA controller

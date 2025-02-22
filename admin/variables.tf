@@ -42,7 +42,10 @@ variable "proxmox_iso_storage" {
   type = string
   default = "nas_v6"
 }
-
+variable "proxmox_data_storage" {
+  type = string
+  default = "nas_v6"
+}
 variable "vm_user_username" {
     type = string
     default = "" # Should look something 'user'
