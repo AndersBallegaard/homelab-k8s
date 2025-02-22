@@ -1,5 +1,5 @@
 #!/bin/bash
-k8s_version=$(kubectl version -o json | jq .serverVersion.gitVersion)
+k8s_version=$(kubectl version -o json | jq .serverVersion.gitVersion | sed 's/\"//g')
 prod_name=srv6-homelab
 mkdir -p ./${k8s_version}/
 
