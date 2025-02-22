@@ -76,7 +76,7 @@ variable "k8s_worker_node_b" {
 }
 variable "k8s_worker_node_c" {
     type = number
-    default = 1
+    default = 2
 }
 variable "k8s_ctrl_cpu_count" {
     type = number

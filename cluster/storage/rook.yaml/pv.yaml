@@ -25,7 +25,7 @@ spec:
 apiVersion: ceph.rook.io/v1
 kind: CephBlockPool
 metadata:
-  name: replicapool
+  name: ceph-blockpool
   namespace: rook-ceph
 spec:
   failureDomain: host
