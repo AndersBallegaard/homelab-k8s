@@ -6,3 +6,11 @@ In this example bind the capacitor service in the flux-system namespace to [::] 
 ```bash
 kubectl -n flux-system port-forward svc/capacitor 9000:9000 --address="::"
 ```
+
+
+## Commonly used forwarding commands
+```bash
+kubectl -n flux-system port-forward svc/capacitor 9000:9000 --address="::"
+kubectl -n rook-ceph port-forward svc/rook-ceph-mgr-dashboard 7000:7000 --address="::"
+# Get secret for ceph admin with "kubectl get secret -n rook-ceph -o jsonpath='{.data.password}' rook-ceph-dashboard-password | base64 -d"
+```

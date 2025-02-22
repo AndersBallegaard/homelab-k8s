@@ -89,6 +89,8 @@ helm install --create-namespace --namespace rook-ceph rook-ceph rook-release/roo
 kubectl label namespace rook-ceph pod-security.kubernetes.io/enforce=privileged
 
 helm install --create-namespace --namespace rook-ceph rook-ceph-cluster --set operatorNamespace=rook-ceph rook-release/rook-ceph-cluster
+
+# NOTE: FluxCD will also deploy some Rook config, setting up rook/ceph will take forever, give it atleast 30 minutes before panicing
 ```
 
 ## Setup fluxCD
