@@ -82,6 +82,15 @@ helm install cilium cilium/cilium --namespace kube-system -f cilium-values.yaml
 
 ```
 
+## Setup rook
+```bash
+helm repo add rook-release https://charts.rook.io/release
+helm install --create-namespace --namespace rook-ceph rook-ceph rook-release/rook-ceph
+kubectl label namespace rook-ceph pod-security.kubernetes.io/enforce=privileged
+
+helm install --create-namespace --namespace rook-ceph rook-ceph-cluster --set operatorNamespace=rook-ceph rook-release/rook-ceph-cluster
+```
+
 ## Setup fluxCD
 ```bash
 flux bootstrap github \
