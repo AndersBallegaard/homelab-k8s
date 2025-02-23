@@ -1,4 +1,7 @@
+replace metallb with cilium LB IPAM and bgp peer cilium
 look into https://cilium.io/use-cases/gateway-api/
+find a way to externally propagate DNS info for services 
+and ingress 
 
 - BGP peer with either lab directly, or move networking to AS201911 control
 - Try to hit full K8S conformity https://github.com/cncf/k8s-conformance/blob/master/instructions.md
