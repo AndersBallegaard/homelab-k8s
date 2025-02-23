@@ -1,14 +1,8 @@
-site_name: Anders Ballegaard k8s homelab
+site_name: K8S homelab
 repo_url: https://github.com/AndersBallegaard/homelab-k8s
-site_url: https://docs.srv6.dk
+site_url: https://andersballegaard.github.io/homelab-k8s/
 site_author: Anders Ballegaard
 site_description: "Documentation for my k8s based homelab"
-features:
-    - navigation.expand
-    - navigation.instant
-    - navigation.sections
-    - search.highlight
-    - search.share
 theme:
   name: null
   custom_dir: 'assets/cinder'
@@ -22,9 +16,7 @@ theme:
 
 nav:
   - Home: index.md
-  - Infrastructure: 
-    - infra/infra.md
-  - Apps: 
-    - apps/apps.md
-  - Troubleshooting: 
-    - troubleshooting/troubleshooting.md
+  - Infrastructure: infra/infra.md
+  - Apps: apps/apps.md
+  - Troubleshooting: troubleshooting/troubleshooting.md
+  - Information: info/info.md

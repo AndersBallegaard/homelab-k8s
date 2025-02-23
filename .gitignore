@@ -12,3 +12,4 @@ admin/talos_config/cilium-cni-patch.yaml
 admin/k8s-cilium-exec.sh
 .venv
 site/
+assets/cinder
