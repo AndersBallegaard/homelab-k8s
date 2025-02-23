@@ -23,9 +23,8 @@ theme:
 nav:
   - Home: index.md
   - Infrastructure: 
-    - infra/overview.md
+    - infra/infra.md
   - Apps: 
-    - apps/overview.md
-    - apps/testapp.md
+    - apps/apps.md
   - Troubleshooting: 
-    - troubleshooting/overview.md
+    - troubleshooting/troubleshooting.md
