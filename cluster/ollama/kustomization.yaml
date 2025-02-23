@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: ollama
+resources:
+  - namespace.yaml
+  - ollama-statefulset.yaml
+  - ollama-service.yaml
+  - ollama-ingress.yaml
+  - owui-pvc.yaml
+  - owui-deployment.yaml
+  - owui-service.yaml
+  - owui-ingress.yaml
