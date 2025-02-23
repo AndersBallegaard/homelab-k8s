@@ -1,5 +1,5 @@
 - BGP peer with either lab directly, or move networking to AS201911 control
-- Try to hit full K8S conformity https://github.com/cncf/k8s-conformance/blob/master/instructions.md # Include results in this repo
+- Try to hit full K8S conformity https://github.com/cncf/k8s-conformance/blob/master/instructions.md
 - Write and test upgrade strategies
 - Deploy kubevirt
 - Migrate LXC services from proxmox to K8S
@@ -7,3 +7,6 @@
 - Build redundancy test automation/process tool
 - Deploy cnpg
 - DR Planning, documentation and testing
+- Convert install process to work on both physical and virtual machines
+- Write full documentation
+- Test up and downscaling
