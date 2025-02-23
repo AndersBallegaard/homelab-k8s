@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-        <title>Information - K8S homelab</title>
+        <title>Conformance testing - K8S homelab</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         
-        <link rel="canonical" href="https://andersballegaard.github.io/homelab-k8s/info/info/">
+        <link rel="canonical" href="https://andersballegaard.github.io/homelab-k8s/infra/conformance_testing/">
         <meta name="author" content="Anders Ballegaard">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -78,11 +78,85 @@
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../../infra/infra/"
-                    class="
-                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                <a href="../.."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#infrastructure-collapse" aria-expanded="false">
                     Infrastructure
                 </a>
+                <div class="collapse" id="infrastructure-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Conformance testing
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#deployment-collapse" aria-expanded="false">
+            Deployment
+        </a>
+
+        <div class="collapse" id="deployment-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../deployment/prepare_admin_node/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Prepare admin node
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../deployment/prepare_proxmox/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Prepare proxmox
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../deployment/setup_cluster/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Setup cluster
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../fluxcd/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            FluxCD
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../kubernetes/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            K8S
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../traefik/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Traefik
+        </a>
+    </li>
+                    </ul>
+                </div>
             </li>
             <li class="drac-box">
                 <a href="../../apps/apps/"
@@ -92,18 +166,44 @@
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../../troubleshooting/troubleshooting/"
+                <a href="../.."
                     class="
-                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#troubleshooting-collapse" aria-expanded="false">
                     Troubleshooting
                 </a>
+                <div class="collapse" id="troubleshooting-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../troubleshooting/port-forwarding/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            K8S Port forwarding
+        </a>
+    </li>
+                    </ul>
+                </div>
             </li>
             <li class="drac-box">
-                <a href="./"
-                    class=" active 
-                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#information-collapse" aria-expanded="false">
                     Information
                 </a>
+                <div class="collapse" id="information-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../info/docs/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Documentation
+        </a>
+    </li>
+                    </ul>
+                </div>
             </li>
         </ul>
         <!-- endblock -->
@@ -133,14 +233,14 @@
         <div class="container">
             <div class="row row-preview">
                 <div class="col">
-                    <a href="../../troubleshooting/troubleshooting/"
+                    <a href="../.."
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </div>
                 <div class="col">
-                    <a 
-                        class="btn-preview drac-btn drac-text-white--hover disabled" style="padding-left: 3%;">
+                    <a href="../deployment/prepare_admin_node/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </div>
@@ -178,48 +278,12 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p><h1 id="about-this-documentation">About this documentation</h1>
-<p>Documentation in this repository is automaticly put toghther from templates, 
-this is done to have a single source to update if a section is needed multiple places 
-like a doc page, and a readme page for a part of subdirectory</p>
-<h2 id="how-to-add-to-this-documentation">How to add to this documentation</h2>
-<h3 id="create-new-section">Create new section</h3>
-<p>First create a directory for the section, and a jinja template file</p>
-<pre><code class="language-bash"># Make directory and empty jinja file
-mkdir -p docs/example
-touch docs/example/example.jinja
-
-# All files should include footer containing warning not to edit md files directly
-echo '{% include &quot;docs/footer.section&quot; %}' &gt;&gt; docs/example/example.jinja
-</code></pre>
-<p>This page should be added to the nav section of mkdocs.yaml, see the file or mkdocs documentation for how to do this</p>
-<h3 id="add-page-to-existing-section">Add page to existing section</h3>
-<p>Create a new file inside the directory you want to add to.
-The file should follow the 'relevant_name.section' naming scheme.
-Treat this file as a markdown file, and add the content you want</p>
-<p>Once you are ready to include it in the documentation add a line to the directorys .jinja file, the line should look something like below</p>
-<pre><code>{% include &quot;example/world_domination.section&quot; %}
-</code></pre>
-<p>Note, this should always be placed above the footer inclusion</p>
-<p>While there aren't many restrictions on the content in a section, it is expected that each section starts with an H1 header</p>
-<h2 id="documentation-deployment">Documentation deployment</h2>
-<p>Deployment to github pages is not automatic, in order to deploy, follow this process</p>
-<pre><code class="language-bash"># The following commands are all from the root of the project
-
-# Build documentation
-./build_docs.sh 
-
-# Source venv
-source .venv/bin/activate
-
-# Run locally to validate changes before deploying
-mkdocs serve
-
-# Use mkdocs github pages feature to deploy
-mkdocs gh-deploy
-</code></pre>
-<hr />
-<p>This page is autogenerated, do not edit it directly <a href="https://andersballegaard.github.io/homelab-k8s/info/info/#about-this-documentation">see this for more information</a></p></p>
+        <p><h1 id="conformance-testing">Conformance testing</h1>
+<h2 id="test-cluster-conformance">Test cluster conformance</h2>
+<p>In order to run tests, from a terminal running in this directory run the following command</p>
+<p>Note: If conformane testing have previously been run on this k8s version, the test results will be overwriten</p>
+<pre><code class="language-bash">./run_test.sh
+</code></pre></p>
     </article>
 </section>
             <!-- endblock -->

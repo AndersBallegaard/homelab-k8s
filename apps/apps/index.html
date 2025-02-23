@@ -78,11 +78,85 @@
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../../infra/infra/"
+                <a href="../.."
                     class="
-                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#infrastructure-collapse" aria-expanded="false">
                     Infrastructure
                 </a>
+                <div class="collapse" id="infrastructure-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../infra/conformance_testing/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Conformance testing
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#deployment-collapse" aria-expanded="false">
+            Deployment
+        </a>
+
+        <div class="collapse" id="deployment-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../../infra/deployment/prepare_admin_node/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Prepare admin node
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../../infra/deployment/prepare_proxmox/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Prepare proxmox
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../../infra/deployment/setup_cluster/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Setup cluster
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../infra/fluxcd/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            FluxCD
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../infra/kubernetes/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            K8S
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../infra/traefik/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Traefik
+        </a>
+    </li>
+                    </ul>
+                </div>
             </li>
             <li class="drac-box">
                 <a href="./"
@@ -92,18 +166,44 @@
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../../troubleshooting/troubleshooting/"
+                <a href="../.."
                     class="
-                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#troubleshooting-collapse" aria-expanded="false">
                     Troubleshooting
                 </a>
+                <div class="collapse" id="troubleshooting-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../troubleshooting/port-forwarding/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            K8S Port forwarding
+        </a>
+    </li>
+                    </ul>
+                </div>
             </li>
             <li class="drac-box">
-                <a href="../../info/info/"
+                <a href="../.."
                     class="
-                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#information-collapse" aria-expanded="false">
                     Information
                 </a>
+                <div class="collapse" id="information-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../info/docs/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Documentation
+        </a>
+    </li>
+                    </ul>
+                </div>
             </li>
         </ul>
         <!-- endblock -->
@@ -133,13 +233,13 @@
         <div class="container">
             <div class="row row-preview">
                 <div class="col">
-                    <a href="../../infra/infra/"
+                    <a href="../../infra/traefik/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../../troubleshooting/troubleshooting/"
+                    <a href="../../troubleshooting/port-forwarding/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
@@ -181,7 +281,7 @@
         <p><h1 id="apps">APPS</h1>
 <p>This section describes the apps running on the cluster</p>
 <hr />
-<p>This page is autogenerated, do not edit it directly <a href="https://andersballegaard.github.io/homelab-k8s/info/info/#about-this-documentation">see this for more information</a></p></p>
+<p>This page is autogenerated, do not edit it directly <a href="https://andersballegaard.github.io/homelab-k8s/info/docs">see this for more information</a></p></p>
     </article>
 </section>
             <!-- endblock -->

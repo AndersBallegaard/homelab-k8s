@@ -9,15 +9,39 @@
          <lastmod>2025-02-23</lastmod>
     </url>
     <url>
-         <loc>https://andersballegaard.github.io/homelab-k8s/info/info/</loc>
+         <loc>https://andersballegaard.github.io/homelab-k8s/info/docs/</loc>
          <lastmod>2025-02-23</lastmod>
     </url>
     <url>
-         <loc>https://andersballegaard.github.io/homelab-k8s/infra/infra/</loc>
+         <loc>https://andersballegaard.github.io/homelab-k8s/infra/conformance_testing/</loc>
          <lastmod>2025-02-23</lastmod>
     </url>
     <url>
-         <loc>https://andersballegaard.github.io/homelab-k8s/troubleshooting/troubleshooting/</loc>
+         <loc>https://andersballegaard.github.io/homelab-k8s/infra/fluxcd/</loc>
+         <lastmod>2025-02-23</lastmod>
+    </url>
+    <url>
+         <loc>https://andersballegaard.github.io/homelab-k8s/infra/kubernetes/</loc>
+         <lastmod>2025-02-23</lastmod>
+    </url>
+    <url>
+         <loc>https://andersballegaard.github.io/homelab-k8s/infra/traefik/</loc>
+         <lastmod>2025-02-23</lastmod>
+    </url>
+    <url>
+         <loc>https://andersballegaard.github.io/homelab-k8s/infra/deployment/prepare_admin_node/</loc>
+         <lastmod>2025-02-23</lastmod>
+    </url>
+    <url>
+         <loc>https://andersballegaard.github.io/homelab-k8s/infra/deployment/prepare_proxmox/</loc>
+         <lastmod>2025-02-23</lastmod>
+    </url>
+    <url>
+         <loc>https://andersballegaard.github.io/homelab-k8s/infra/deployment/setup_cluster/</loc>
+         <lastmod>2025-02-23</lastmod>
+    </url>
+    <url>
+         <loc>https://andersballegaard.github.io/homelab-k8s/troubleshooting/port-forwarding/</loc>
          <lastmod>2025-02-23</lastmod>
     </url>
 </urlset>

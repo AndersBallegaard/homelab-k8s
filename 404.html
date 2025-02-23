@@ -78,11 +78,85 @@
                 </a>
             </li>
             <li class="drac-box">
-                <a href="/homelab-k8s/infra/infra/"
+                <a href="/homelab-k8s/."
                     class="
-                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#infrastructure-collapse" aria-expanded="false">
                     Infrastructure
                 </a>
+                <div class="collapse" id="infrastructure-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="/homelab-k8s/infra/conformance_testing/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Conformance testing
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#deployment-collapse" aria-expanded="false">
+            Deployment
+        </a>
+
+        <div class="collapse" id="deployment-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="/homelab-k8s/infra/deployment/prepare_admin_node/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Prepare admin node
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="/homelab-k8s/infra/deployment/prepare_proxmox/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Prepare proxmox
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="/homelab-k8s/infra/deployment/setup_cluster/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Setup cluster
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="/homelab-k8s/infra/fluxcd/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            FluxCD
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="/homelab-k8s/infra/kubernetes/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            K8S
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="/homelab-k8s/infra/traefik/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Traefik
+        </a>
+    </li>
+                    </ul>
+                </div>
             </li>
             <li class="drac-box">
                 <a href="/homelab-k8s/apps/apps/"
@@ -92,18 +166,44 @@
                 </a>
             </li>
             <li class="drac-box">
-                <a href="/homelab-k8s/troubleshooting/troubleshooting/"
+                <a href="/homelab-k8s/."
                     class="
-                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#troubleshooting-collapse" aria-expanded="false">
                     Troubleshooting
                 </a>
+                <div class="collapse" id="troubleshooting-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="/homelab-k8s/troubleshooting/port-forwarding/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            K8S Port forwarding
+        </a>
+    </li>
+                    </ul>
+                </div>
             </li>
             <li class="drac-box">
-                <a href="/homelab-k8s/info/info/"
+                <a href="/homelab-k8s/."
                     class="
-                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#information-collapse" aria-expanded="false">
                     Information
                 </a>
+                <div class="collapse" id="information-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="/homelab-k8s/info/docs/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Documentation
+        </a>
+    </li>
+                    </ul>
+                </div>
             </li>
         </ul>
         <!-- endblock -->

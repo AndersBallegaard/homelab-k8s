@@ -2,24 +2,24 @@
 <html lang="en">
 
 <head>
-        <title>Troubleshooting - K8S homelab</title>
+        <title>Prepare proxmox - K8S homelab</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         
-        <link rel="canonical" href="https://andersballegaard.github.io/homelab-k8s/troubleshooting/troubleshooting/">
+        <link rel="canonical" href="https://andersballegaard.github.io/homelab-k8s/infra/deployment/prepare_proxmox/">
         <meta name="author" content="Anders Ballegaard">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+            <link rel="stylesheet" href="../../../assets/css/darcula-highlight.min.css">
 
-        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
-        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+        <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../../assets/css/mkdocs.min.css">
 
         
-            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+            <link  rel="icon" type="image/x-icon" href="../../../assets/img/favicon.ico">
         
             <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
@@ -71,39 +71,139 @@
         <ul class="mb-5 drac-list drac-list-none">
             
             <li class="drac-box">
-                <a href="../.."
+                <a href="../../.."
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
                     Home
                 </a>
             </li>
             <li class="drac-box">
-                <a href="../../infra/infra/"
-                    class="
-                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                <a href="../../.."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#infrastructure-collapse" aria-expanded="false">
                     Infrastructure
                 </a>
+                <div class="collapse" id="infrastructure-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../conformance_testing/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Conformance testing
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#deployment-collapse" aria-expanded="false">
+            Deployment
+        </a>
+
+        <div class="collapse" id="deployment-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../prepare_admin_node/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Prepare admin node
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Prepare proxmox
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../setup_cluster/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Setup cluster
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../fluxcd/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            FluxCD
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../kubernetes/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            K8S
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../traefik/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Traefik
+        </a>
+    </li>
+                    </ul>
+                </div>
             </li>
             <li class="drac-box">
-                <a href="../../apps/apps/"
+                <a href="../../../apps/apps/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
                     Apps
                 </a>
             </li>
             <li class="drac-box">
-                <a href="./"
-                    class=" active 
-                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                <a href="../../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#troubleshooting-collapse" aria-expanded="false">
                     Troubleshooting
                 </a>
+                <div class="collapse" id="troubleshooting-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../../troubleshooting/port-forwarding/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            K8S Port forwarding
+        </a>
+    </li>
+                    </ul>
+                </div>
             </li>
             <li class="drac-box">
-                <a href="../../info/info/"
+                <a href="../../.."
                     class="
-                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#information-collapse" aria-expanded="false">
                     Information
                 </a>
+                <div class="collapse" id="information-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../../info/docs/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Documentation
+        </a>
+    </li>
+                    </ul>
+                </div>
             </li>
         </ul>
         <!-- endblock -->
@@ -133,13 +233,13 @@
         <div class="container">
             <div class="row row-preview">
                 <div class="col">
-                    <a href="../../apps/apps/"
+                    <a href="../prepare_admin_node/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../../info/info/"
+                    <a href="../setup_cluster/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
@@ -151,7 +251,7 @@
 
                     <!-- block search -->
                     <li class="nav-item"><div role="search" class="search-box">
-	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+	<form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
 		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
 		placeholder="Search docs" title="Type search term here" />
 	</form>
@@ -178,30 +278,20 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p><h1 id="troubleshooting">Troubleshooting</h1>
-<p>Tips and ticks for the cluster</p>
-<h1 id="port-forwarding">Port forwarding</h1>
-<p>For troubleshooting purposes it is often practical to port forward a service in k8s.</p>
-<p>This is also the only way to access certine admin interfaces that aren't exposed with an ingress</p>
-<h2 id="generic-service">Generic service</h2>
-<p>This is the general way to expose any service with a port-forward.
-In a step to reduce the use of legacy IP, binding to ipv6 is forced in this example, note you might want to bind to ::1 instead of ::</p>
-<pre><code class="language-bash">kubectl -n NAMESPACE port-forward svc/SERVICE_NAME PORT:PORT --address=&quot;::&quot;
-</code></pre>
-<h2 id="capacitor">Capacitor</h2>
-<p>If troubleshooting fluxcd, it might be nice to have a more visual representation of what services are in fluxcd.</p>
-<p>For this purpose a capacitor deployment exists, but isn't exposed via any ingress for security reasons, to forward it run the following command</p>
-<pre><code class="language-bash">kubectl -n flux-system port-forward svc/capacitor 9000:9000 --address=&quot;::1&quot;
-</code></pre>
-<h2 id="ceph-dashboard">CEPH dashboard</h2>
-<p>When troubleshooting ceph/rook, it might be nice to use the ceph dashboard, it can be exposed using the following command</p>
-<pre><code class="language-bash">kubectl -n rook-ceph port-forward svc/rook-ceph-mgr-dashboard 7000:7000 --address=&quot;::&quot;
-</code></pre>
-<p>In order to login use the username "admin", and the password provided by the following command.</p>
-<pre><code class="language-bash">kubectl get secret -n rook-ceph -o jsonpath='{.data.password}' rook-ceph-dashboard-password | base64 -d
-</code></pre>
-<hr />
-<p>This page is autogenerated, do not edit it directly <a href="https://andersballegaard.github.io/homelab-k8s/info/info/#about-this-documentation">see this for more information</a></p></p>
+        <p><h2 id="prepare-proxmox-for-cloudinit">Prepare proxmox for cloudinit</h2>
+<p>In case proxmox isn't ready for cloudinit of talos, this is how to set it up. Currently this is done from the proxmox UI as a one of thing</p>
+<pre><code class="language-bash"># Download a talos image from the talos image factory, it needs to be a nocloud image
+# The image should be placed under the name &quot;talos-nocloud-amd64.iso&quot; in the shared vm datastore
+
+# Create a VM with the 1g disk on shared storage, and attach the iso. Ram and CPU doesn't matter
+# Don't start the VM
+# The vm MUST be named talos-template, and should have the ID 9100
+# CPU Type should be host for best performace
+# Disk size is intentionally below recormendations for faster template deployments, cloud init will resize to whatever the VM is speced for
+#
+# Convert VM to template
+
+</code></pre></p>
     </article>
 </section>
             <!-- endblock -->
@@ -220,11 +310,11 @@ In a step to reduce the use of legacy IP, binding to ipv6 is forced in this exam
 
     </main>
 
-        <script>var base_url = '../..';</script>
-        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
-        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
-        <script src="../../assets/js/mkdocs.js"></script>
-			<script src="../../search/main.js" defer></script>
+        <script>var base_url = '../../..';</script>
+        <script src="../../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../assets/js/mkdocs.js"></script>
+			<script src="../../../search/main.js" defer></script>
 
 </body>
 
