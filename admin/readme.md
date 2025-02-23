@@ -73,6 +73,10 @@ helm install --create-namespace --namespace rook-ceph rook-ceph-cluster --set op
 # NOTE: FluxCD will also deploy some Rook config, setting up rook/ceph will take forever, give it atleast 30 minutes before panicing
 ```
 
+## Install metalLB
+```bash
+kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.14.9/config/manifests/metallb-native.yaml
+```
 ## Setup fluxCD
 ```bash
 flux bootstrap github \
