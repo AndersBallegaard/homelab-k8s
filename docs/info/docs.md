@@ -1,7 +1,7 @@
 # About this documentation
-Documentation in this repository is automaticly put toghther from templates, 
-this is done to have a single source to update if a section is needed multiple places 
-like a doc page, and a readme page for a part of subdirectory
+Parts of the documentation in this use templates, if markdown file is generated from a template a notice should be present at the bottom of the file.
+
+This automatic generation is used to prevent documentation getting out of sync when the same information is needed in multiple places, an example could be that the repo's readme.md file should be identical to the "Home" page in the documentation, this is achived by using a template for the readme.md importing the "Home" document
 
 ## How to add to this documentation
 ### Create new section
@@ -15,7 +15,7 @@ touch docs/example/example.jinja
 echo '{{ '{% include \"docs/footer.section\" %}' }}' >> docs/example/example.jinja
 ```
 This page should be added to the nav section of mkdocs.yaml, see the file or mkdocs documentation for how to do this
-### Add page to existing section
+### Add page
 Create a new file inside the directory you want to add to.
 The file should follow the 'relevant_name.section' naming scheme.
 Treat this file as a markdown file, and add the content you want

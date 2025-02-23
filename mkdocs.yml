@@ -14,7 +14,17 @@ theme:
 
 nav:
   - Home: index.md
-  - Infrastructure: infra/infra.md
+  - Infrastructure:
+    - Conformance testing: infra/conformance_testing.md
+    - Deployment:
+      - Prepare admin node: infra/deployment/prepare_admin_node.md
+      - Prepare proxmox: infra/deployment/prepare_proxmox.md
+      - Setup cluster: infra/deployment/setup_cluster.md
+    - FluxCD: infra/fluxcd.md
+    - K8S: infra/kubernetes.md
+    - Traefik: infra/traefik.md
   - Apps: apps/apps.md
-  - Troubleshooting: troubleshooting/troubleshooting.md
-  - Information: info/info.md
+  - Troubleshooting:
+    - K8S Port forwarding: troubleshooting/port-forwarding.md
+  - Information:
+    - Documentation: info/docs.md

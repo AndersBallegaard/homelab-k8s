@@ -1,7 +1,11 @@
+#!/usr/bin/python3
 import os
-from jinja2 import Template, Environment, FileSystemLoader
+from jinja2 import Environment, FileSystemLoader
 
 def get_files_recursive(path='.'):
+    """
+    get all files in 'path' including files in subdirectories
+    """
     o = []
     for entry in os.listdir(path):
         full_path = os.path.join(path, entry)
@@ -12,6 +16,11 @@ def get_files_recursive(path='.'):
     return o
 
 def build_document(filename):
+    """
+    Build jinja2 templates into markdown
+    The output file will be the same as the template just with .jinja replaced with .md
+    So docs/example/world_domination.jinja would become docs/example/world_domination.md
+    """
     ofn = file[:-6] + ".md"
     print("="*5, f"Building {ofn}", "="*5)
 
