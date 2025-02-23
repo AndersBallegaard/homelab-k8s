@@ -6,3 +6,4 @@ resources:
   - ippool.yaml
   - bgp.yaml
   - bgppeers.yaml
+  - l2.yaml

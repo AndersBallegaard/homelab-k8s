@@ -268,7 +268,11 @@ metadata:
   name: ingress-nginx-controller-admission
   namespace: ingress-nginx
 spec:
-  type: LoadBalancer
+  type: ClusterIP
+  ipFamilyPolicy: SingleStack
+  ipFamilies: 
+    - IPv6
+  externalIPs: ["2a0e:97c0:ae2:2501::3011"]
   ports:
     - name: https-webhook
       port: 443
@@ -299,6 +303,7 @@ spec:
   ipFamilyPolicy: SingleStack
   ipFamilies: 
     - IPv6
+  externalIPs: ["2a0e:97c0:ae2:2501::3010"]
   ports:
     - name: http
       port: 80
