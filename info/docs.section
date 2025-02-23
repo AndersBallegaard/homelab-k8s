@@ -14,6 +14,9 @@ Deployment to github pages is not automatic, in order to deploy, follow this pro
 # Source venv
 source .venv/bin/activate
 
+# Run locally to validate changes before deploying
+mkdocs serve
+
 # Use mkdocs github pages feature to deploy
 mkdocs gh-deploy
 ```
