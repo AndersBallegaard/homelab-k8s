@@ -4,9 +4,7 @@ site_url: https://andersballegaard.github.io/homelab-k8s/
 site_author: Anders Ballegaard
 site_description: "Documentation for my k8s based homelab"
 theme:
-  name: null
-  custom_dir: 'assets/cinder'
-  colorscheme: dracula
+  name: dracula
   hljs_languages:
     - yaml
     - bash

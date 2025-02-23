@@ -27,6 +27,8 @@ Once you are ready to include it in the documentation add a line to the director
 ```
 Note, this should always be placed above the footer inclusion
 
+While there aren't many restrictions on the content in a section, it is expected that each section starts with an H1 header
+
 ## Documentation deployment
 Deployment to github pages is not automatic, in order to deploy, follow this process
 ```bash
