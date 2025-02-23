@@ -15,5 +15,5 @@ Deployment to github pages is not automatic, in order to deploy, follow this pro
 source .venv/bin/activate
 
 # Use mkdocs github pages feature to deploy
-
+mkdocs gh-deploy
 ```
