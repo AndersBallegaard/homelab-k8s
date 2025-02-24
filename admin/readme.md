@@ -60,6 +60,9 @@ helm repo add cilium https://helm.cilium.io/
 
 helm install cilium cilium/cilium --namespace kube-system -f cilium-values.yaml
 
+# Create BGP Password
+kubectl create secret generic -n kube-system --type=string bgp-auth-secret --from-literal=password=REPLACEWITHPASSWORD
+
 ```
 
 ## Setup rook
