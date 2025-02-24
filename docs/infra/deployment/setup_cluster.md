@@ -38,11 +38,6 @@ helm install --create-namespace --namespace rook-ceph rook-ceph-cluster --set op
 # NOTE: FluxCD will also deploy some Rook config, setting up rook/ceph will take forever, give it atleast 30 minutes before panicing
 ```
 
-## Install metalLB
-```bash
-# Note metallb FRR-K8S is currently experimental, but i think it is needed for propper ipv6 support
-kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.14.9/config/manifests/metallb-frr-k8s.yaml
-```
 ## Setup fluxCD
 ```bash
 flux bootstrap github \
