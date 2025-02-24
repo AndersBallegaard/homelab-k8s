@@ -21,24 +21,9 @@ tofu init
 
 ## Setup Cillium CNI
 ```bash
-helm repo add cilium https://helm.cilium.io/
-
-helm install cilium cilium/cilium --namespace kube-system -f cilium-values.yaml
-
 # Create BGP Password
-kubectl create secret generic -n kube-system --type=string bgp-auth-secret --from-literal=password=REPLACEWITHPASSWORD
+kubectl create secret generic -n cilium-secrets --type=string bgp-auth-secret --from-literal=password=REPLACEWITHPASSWORD
 
-```
-
-## Setup rook
-```bash
-helm repo add rook-release https://charts.rook.io/release
-helm install --create-namespace --namespace rook-ceph rook-ceph rook-release/rook-ceph
-kubectl label namespace rook-ceph pod-security.kubernetes.io/enforce=privileged
-
-helm install --create-namespace --namespace rook-ceph rook-ceph-cluster --set operatorNamespace=rook-ceph rook-release/rook-ceph-cluster
-
-# NOTE: FluxCD will also deploy some Rook config, setting up rook/ceph will take forever, give it atleast 30 minutes before panicing
 ```
 
 ## Setup fluxCD

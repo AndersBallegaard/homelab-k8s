@@ -13,8 +13,8 @@ resource "proxmox_vm_qemu" "worker_vmhost_a" {
   automatic_reboot = true
 
   ciupgrade  = true
-  nameserver = "2a0e:97c0:ae1:: 1.1.1.1"
-  ipconfig0  = "ip=${var.proxmox_ipv4_net}.11${count.index}/24,gw=${var.proxmox_ipv4_net}.1,ip6=${var.proxmox_ipv6_net}::a1c${count.index}/64,gw6=${var.proxmox_ipv6_net}::1"
+  nameserver = "2a0e:97c0:ae1::"
+  ipconfig0  = "ip6=${var.proxmox_ipv6_net}::a1c${count.index}/64,gw6=${var.proxmox_ipv6_net}::1"
   skip_ipv6  = false
   ciuser     = var.vm_user_username
   sshkeys    = var.vm_user_sshkey
@@ -69,8 +69,8 @@ resource "proxmox_vm_qemu" "worker_vmhost_b" {
   automatic_reboot = true
 
   ciupgrade  = true
-  nameserver = "2a0e:97c0:ae1:: 1.1.1.1"
-  ipconfig0  = "ip=${var.proxmox_ipv4_net}.12${count.index}/24,gw=${var.proxmox_ipv4_net}.1,ip6=${var.proxmox_ipv6_net}::b1c${count.index}/64,gw6=${var.proxmox_ipv6_net}::1"
+  nameserver = "2a0e:97c0:ae1::"
+  ipconfig0  = "ip6=${var.proxmox_ipv6_net}::b1c${count.index}/64,gw6=${var.proxmox_ipv6_net}::1"
   skip_ipv6  = false
   ciuser     = var.vm_user_username
   sshkeys    = var.vm_user_sshkey
@@ -132,8 +132,8 @@ resource "proxmox_vm_qemu" "worker_vmhost_c" {
   automatic_reboot = true
 
   ciupgrade  = true
-  nameserver = "2a0e:97c0:ae1:: 1.1.1.1"
-  ipconfig0  = "ip=${var.proxmox_ipv4_net}.13${count.index}/24,gw=${var.proxmox_ipv4_net}.1,ip6=${var.proxmox_ipv6_net}::c1c${count.index}/64,gw6=${var.proxmox_ipv6_net}::1"
+  nameserver = "2a0e:97c0:ae1::"
+  ipconfig0  = "ip6=${var.proxmox_ipv6_net}::c1c${count.index}/64,gw6=${var.proxmox_ipv6_net}::1"
   skip_ipv6  = false
   ciuser     = var.vm_user_username
   sshkeys    = var.vm_user_sshkey

@@ -26,10 +26,6 @@ variable "proxmox_nic" {
   type = string
   default = "VL2501"
 }
-variable "proxmox_ipv4_net" {
-  type = string
-  default = "10.25.1" # Expects network part of /24
-}
 variable "proxmox_ipv6_net" {
   type = string
   default = "2a0e:97c0:ae2:2501" # Expects network part of /64

@@ -5,7 +5,6 @@ machine:
     kubelet:
       nodeIP:
         validSubnets:
-          - 10.25.1.0/24
           - 2a0e:97c0:ae2:2501::/64
           - fe80::/16
 cluster:
@@ -17,10 +16,8 @@ cluster:
         # Commented out due to k8s conformety testing not expecting a custom domain, and general assumption in the ecosystem of default domain
         # dnsDomain: k8s.srv6.dk
         podSubnets:
-            - 10.201.0.0/16
             - 2a0e:97c0:ae2:c200::/56
         serviceSubnets:
-            - 10.200.0.0/20
             - 2a0e:97c0:ae2:c100::1:0/112
     apiServer:
         certSANs: ["ctrl.k8s.srv6.dk"]
