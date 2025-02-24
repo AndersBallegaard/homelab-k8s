@@ -14,8 +14,13 @@ k8sServiceHost: "ctrl.k8s.srv6.dk"
 k8sServicePort: "6443"
 bgpControlPlane:
   enabled: true
+ipv4:
+  enabled: false
 ipv6:
   enabled: true
+routingMode: native
+enableIPv4Masquerade: false
+enableIPv6Masquerade: false
 securityContext:
   privileged: true
 #   capabilities:
