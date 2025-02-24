@@ -16,6 +16,11 @@ spec:
       peerAddress: 2a0e:97c0:ae2:2501::1
       peerConfigRef:
         name: "cilium-peer"
+    - name: "peer-vl2501-test"
+      peerASN: 65666
+      peerAddress: 2a0e:97c0:ae2:2501::b000
+      peerConfigRef:
+        name: "cilium-peer"
 ---
 apiVersion: cilium.io/v2alpha1
 kind: CiliumBGPPeerConfig
@@ -57,3 +62,18 @@ spec:
       addresses:
       - ExternalIP
       - LoadBalancerIP
+      - ClusterIP
+---
+apiVersion: cilium.io/v2alpha1
+kind: CiliumBGPAdvertisement
+metadata:
+  name: bgp-advertisements-podcidr
+  labels:
+    advertise: bgp
+spec:
+  advertisements:
+    - advertisementType: "PodCIDR"
+      attributes:
+        communities:
+          standard: [ "65000:99" ]
+        localPreference: 99
