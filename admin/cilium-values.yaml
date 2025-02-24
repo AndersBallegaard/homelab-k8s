@@ -12,6 +12,8 @@ hubble:
 kubeProxyReplacement: true
 k8sServiceHost: "ctrl.k8s.srv6.dk"
 k8sServicePort: "6443"
+bgpControlPlane:
+  enabled: true
 ipv6:
   enabled: true
 securityContext:
