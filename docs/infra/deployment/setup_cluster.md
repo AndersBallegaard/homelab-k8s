@@ -22,7 +22,7 @@ tofu init
 ## Setup Cillium CNI
 ```bash
 # Create BGP Password
-kubectl create secret generic -n cilium-secrets --type=string bgp-auth-secret --from-literal=password=REPLACEWITHPASSWORD
+kubectl create secret generic -n kube-system --type=string bgp-auth-secret --from-literal=password=REPLACEWITHPASSWORD
 
 ```
 

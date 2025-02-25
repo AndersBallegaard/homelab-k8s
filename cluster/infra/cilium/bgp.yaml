@@ -11,16 +11,17 @@ spec:
   - name: "instance-65500"
     localASN: 65500
     peers:
-    - name: "peer-lfw01"
-      peerASN: 65001
-      peerAddress: 2a0e:97c0:ae2:2501::1
-      peerConfigRef:
-        name: "cilium-peer"
-    - name: "peer-vl2501-test"
+    - name: "r01"
       peerASN: 65666
-      peerAddress: 2a0e:97c0:ae2:2501::b000
+      peerAddress: 2a0e:97c0:ae3:fff0::1
       peerConfigRef:
         name: "cilium-peer"
+    - name: "r02"
+      peerASN: 65666
+      peerAddress: 2a0e:97c0:ae3:fff0::2
+      peerConfigRef:
+        name: "cilium-peer"
+    
 ---
 apiVersion: cilium.io/v2alpha1
 kind: CiliumBGPPeerConfig
@@ -42,38 +43,3 @@ spec:
       advertisements:
         matchLabels:
           advertise: bgp
----
-apiVersion: cilium.io/v2alpha1
-kind: CiliumBGPAdvertisement
-metadata:
-  labels:
-    advertise: bgp
-  name: bgp-advertisements
-spec:
-  advertisements:
-  - advertisementType: Service
-    selector:
-      matchExpressions:
-      - key: somekey  # this is not a placeholder, this is legit
-        operator: NotIn
-        values:
-        - never-used-value
-    service:
-      addresses:
-      - ExternalIP
-      - LoadBalancerIP
-      - ClusterIP
----
-apiVersion: cilium.io/v2alpha1
-kind: CiliumBGPAdvertisement
-metadata:
-  name: bgp-advertisements-podcidr
-  labels:
-    advertise: bgp
-spec:
-  advertisements:
-    - advertisementType: "PodCIDR"
-      attributes:
-        communities:
-          standard: [ "65000:99" ]
-        localPreference: 99

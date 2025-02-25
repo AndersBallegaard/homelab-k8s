@@ -5,3 +5,4 @@ metadata:
 resources:
   - lb-ipam.yaml
   - bgp.yaml
+  - advertisements.yaml

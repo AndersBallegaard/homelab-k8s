@@ -1,9 +1,9 @@
-replace metallb with cilium LB IPAM and bgp peer cilium
+Create dknim-ar02 as a 2nd AS201911 PE, this one should just follow AS201911 standards
+
 look into https://cilium.io/use-cases/gateway-api/
 find a way to externally propagate DNS info for services 
 and ingress 
 
-- BGP peer with either lab directly, or move networking to AS201911 control
 - Try to hit full K8S conformity https://github.com/cncf/k8s-conformance/blob/master/instructions.md
 - Write and test upgrade strategies
 - Deploy kubevirt

@@ -1,6 +1,6 @@
 site_name: K8S homelab
 repo_url: https://github.com/AndersBallegaard/homelab-k8s
-site_url: https://andersballegaard.github.io/homelab-k8s/
+site_url: https://homelab.anderstb.dk
 site_author: Anders Ballegaard
 site_description: "Documentation for my k8s based homelab"
 theme:
@@ -15,11 +15,14 @@ theme:
 nav:
   - Home: index.md
   - Infrastructure:
-    - Conformance testing: infra/conformance_testing.md
     - Deployment:
       - Prepare admin node: infra/deployment/prepare_admin_node.md
       - Prepare proxmox: infra/deployment/prepare_proxmox.md
       - Setup cluster: infra/deployment/setup_cluster.md
+    - Networking:
+      - Overview: infra/networking/overview.md
+      - VYOS Configuration: infra/networking/vyos.md
+    - Conformance testing: infra/conformance_testing.md
     - FluxCD: infra/fluxcd.md
     - K8S: infra/kubernetes.md
     - Traefik: infra/traefik.md

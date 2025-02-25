@@ -4,4 +4,4 @@ metadata:
   name: "lb-pool"
 spec:
   blocks:
-  - cidr: "2a0e:97c0:ae2:c401::/64"
+  - cidr: "2a0e:97c0:ae3:c401::/64"

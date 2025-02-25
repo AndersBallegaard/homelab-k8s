@@ -124,4 +124,19 @@ resource "cloudflare_dns_record" "map_cluster_domain_to_workers" {
   content = "vip.${var.vm_dns_suffix}"
   ttl = 1
 }
-
+resource "cloudflare_dns_record" "r01" {
+  zone_id = var.cloudflare_zone_id
+  proxied = false
+  name = "r01.${var.vm_dns_suffix}"
+  type = "AAAA"
+  content = "2a0e:97c0:ae3:ffff::1"
+  ttl = 300
+}
+resource "cloudflare_dns_record" "r02" {
+  zone_id = var.cloudflare_zone_id
+  proxied = false
+  name = "r02.${var.vm_dns_suffix}"
+  type = "AAAA"
+  content = "2a0e:97c0:ae3:ffff::2"
+  ttl = 300
+}

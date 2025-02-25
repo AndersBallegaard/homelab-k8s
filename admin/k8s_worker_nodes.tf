@@ -113,7 +113,7 @@ resource "proxmox_vm_qemu" "worker_vmhost_b" {
 
   network {
     id = 0
-    bridge = "VL2501"
+    bridge = var.proxmox_nic
     model  = "virtio"
   }
 }
