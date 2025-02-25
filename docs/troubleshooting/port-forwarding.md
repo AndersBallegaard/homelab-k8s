@@ -17,13 +17,3 @@ For this purpose a capacitor deployment exists, but isn't exposed via any ingres
 ```bash
 kubectl -n flux-system port-forward svc/capacitor 9000:9000 --address="::1"
 ```
-
-## CEPH dashboard
-When troubleshooting ceph/rook, it might be nice to use the ceph dashboard, it can be exposed using the following command
-```bash
-kubectl -n rook-ceph port-forward svc/rook-ceph-mgr-dashboard 7000:7000 --address="::"
-```
-In order to login use the username "admin", and the password provided by the following command.
-```bash
-kubectl get secret -n rook-ceph -o jsonpath='{.data.password}' rook-ceph-dashboard-password | base64 -d
-```
