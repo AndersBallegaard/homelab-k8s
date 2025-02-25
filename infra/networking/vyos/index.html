@@ -2,24 +2,24 @@
 <html lang="en">
 
 <head>
-        <title>K8S homelab</title>
+        <title>VYOS Configuration - K8S homelab</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         
-        
+        <link rel="canonical" href="https://homelab.anderstb.dk/infra/networking/vyos/">
         <meta name="author" content="Anders Ballegaard">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-            <link rel="stylesheet" href="./assets/css/darcula-highlight.min.css">
+            <link rel="stylesheet" href="../../../assets/css/darcula-highlight.min.css">
 
-        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./assets/css/dracula-ui.min.css">
-        <link rel="stylesheet" href="./assets/css/mkdocs.min.css">
+        <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../../assets/css/mkdocs.min.css">
 
         
-            <link  rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+            <link  rel="icon" type="image/x-icon" href="../../../assets/img/favicon.ico">
         
             <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
@@ -71,15 +71,15 @@
         <ul class="mb-5 drac-list drac-list-none">
             
             <li class="drac-box">
-                <a href="./."
+                <a href="../../.."
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
                     Home
                 </a>
             </li>
             <li class="drac-box">
-                <a href="./."
-                    class="
+                <a href="../../.."
+                    class=" active 
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
                     data-bs-toggle="collapse" data-bs-target="#infrastructure-collapse" aria-expanded="false">
                     Infrastructure
@@ -98,7 +98,7 @@
             <ul class="mb-5 drac-list drac-list-none">
                     
     <li class="drac-box-ternary">
-        <a href="./infra/deployment/prepare_admin_node/"
+        <a href="../../deployment/prepare_admin_node/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Prepare admin node
@@ -106,7 +106,7 @@
     </li>
                     
     <li class="drac-box-ternary">
-        <a href="./infra/deployment/prepare_proxmox/"
+        <a href="../../deployment/prepare_proxmox/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Prepare proxmox
@@ -114,7 +114,7 @@
     </li>
                     
     <li class="drac-box-ternary">
-        <a href="./infra/deployment/setup_cluster/"
+        <a href="../../deployment/setup_cluster/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Setup cluster
@@ -135,7 +135,7 @@
             <ul class="mb-5 drac-list drac-list-none">
                     
     <li class="drac-box-ternary">
-        <a href="./infra/networking/overview/"
+        <a href="../overview/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Overview
@@ -143,8 +143,8 @@
     </li>
                     
     <li class="drac-box-ternary">
-        <a href="./infra/networking/vyos/"
-            class="
+        <a href="./"
+            class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             VYOS Configuration
         </a>
@@ -154,7 +154,7 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="./infra/conformance_testing/"
+        <a href="../../conformance_testing/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Conformance testing
@@ -162,7 +162,7 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="./infra/fluxcd/"
+        <a href="../../fluxcd/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             FluxCD
@@ -170,7 +170,7 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="./infra/kubernetes/"
+        <a href="../../kubernetes/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             K8S
@@ -178,7 +178,7 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="./infra/traefik/"
+        <a href="../../traefik/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Traefik
@@ -188,14 +188,14 @@
                 </div>
             </li>
             <li class="drac-box">
-                <a href="./apps/apps/"
+                <a href="../../../apps/apps/"
                     class="
                     drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
                     Apps
                 </a>
             </li>
             <li class="drac-box">
-                <a href="./."
+                <a href="../../.."
                     class="
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
                     data-bs-toggle="collapse" data-bs-target="#troubleshooting-collapse" aria-expanded="false">
@@ -205,7 +205,7 @@
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
-        <a href="./troubleshooting/port-forwarding/"
+        <a href="../../../troubleshooting/port-forwarding/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             K8S Port forwarding
@@ -215,7 +215,7 @@
                 </div>
             </li>
             <li class="drac-box">
-                <a href="./."
+                <a href="../../.."
                     class="
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
                     data-bs-toggle="collapse" data-bs-target="#information-collapse" aria-expanded="false">
@@ -225,7 +225,7 @@
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
-        <a href="./info/docs/"
+        <a href="../../../info/docs/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Documentation
@@ -259,12 +259,28 @@
                     <!-- block preview -->
                     <li class="nav-item">
                             
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../overview/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../../conformance_testing/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
                     </li>
                     <!--  endblock -->
 
                     <!-- block search -->
                     <li class="nav-item"><div role="search" class="search-box">
-	<form id="rtd-search-form" class="wy-form" action="./search.html" method="get">
+	<form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
 		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
 		placeholder="Search docs" title="Type search term here" />
 	</form>
@@ -289,25 +305,105 @@
             <!-- endblock -->
 
             <!-- block content -->
-	<section class="p-md-5 content-search">
-		<article>
-			<p></p>
-			<h1 id="search">Search Results</h1>
-			<hr>
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="vyos">Vyos</h1>
+<p>Two VYOS Routers are used to provide external connectivity to the cluster, eventually this should be automated using cloud-init for VYOS, but right now i can't be bothered, so this is how they are setup</p>
+<h2 id="specs">Specs</h2>
+<p>Both of the virtual routers have these specs, and are being run on proxmox. The specs are probably subject to change depending on the volume of traffic. But even with a full IPv6 internet routing table being annouced to them from AS201911 they seem happy with these modest specs.</p>
+<ul>
+<li>1 core</li>
+<li>2GB Ram</li>
+<li>1 NIC in AS201911 Transit network</li>
+<li>1 NIC in K8S network</li>
+</ul>
+<h2 id="general-router-baseline">General router baseline</h2>
+<ul>
+<li>Setup accounts</li>
+<li>Setup update checking</li>
+<li>Disable SSH Password auth</li>
+</ul>
+<pre><code class="language-bash"># Unless you want me, and only me to login to your router, i would sudgest changing this key
+set system login user anders authentication public-keys JUMPHOST key 'AAAAB3NzaC1yc2EAAAADAQABAAABgQC8LOd5EgLmJiqWlikJMBNqn92c1TMyDYYJybmMRwu3ysOcf5jWwzVx1d6jZOPboH241Q3Rg59AtqJpFLEDis0myVvdLfcZa88DsjhfFUgDA4LMatItoUpqj2xKwJsTHKWjaSL5zVGv1rXOnMv3CA90Cye7NrEP11AxrLeCawpsQC/Gwcrc7JLoKrYK1bz2zPI9WwPonKhOUC0zfpAX9G9mj3Ybp7aogYAsBweoFw4X533usswFDkPZl9SYnetufEZ/XGgl3TFoDETsQ4Ddztazu9snPRwlIyAq2Lv1+tU2hc2lKu0AWv4zPehEdMz8dXodB1bfkD63Rpy004Naa+tboJnJQUUpfZqqVEpI0byp7t64suAU1IvmgZo02A3kg6m+HJuMU6k1hAbrgXttRWR/fRDSvdGydPiyi+8mSvVYrstcpH63mvMw2gVOkoDeBzP+ClejkCoTLuXSb38reAivG0j02FyyoWRrBumfBHJb6lC8hUHQi04DfX2B/G+0UVM='
+set system login user anders authentication public-keys JUMPHOST type 'ssh-rsa'
 
-			<form id="content_search" action="search.html">
-				<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
-				<input name="q" id="mkdocs-search-query" type="text" class="drac-input drac-input-purple drac-text-white search_input search-query ui-autocomplete-input"
-					placeholder="Search the Docs" autocomplete="off" autofocus title="Type search term here">
-			</form>
-			
-			<div id="mkdocs-search-results" class="search-results" data-no-results-text="No results found">
-				Searching...
-			</div>
+set system name-server '2606:4700:4700::1111'
+set system update-check auto-check
+set system update-check url 'https://raw.githubusercontent.com/vyos/vyos-nightly-build/refs/heads/current/version.json'
 
-		</article>
-	</section>
+set service ssh disable-password-authentication
+set system domain-name 'k8s.srv6.dk'
 
+set interfaces ethernet eth0 description 'AS201911_TRANSIT'
+set interfaces ethernet eth1 description 'K8S_NETWORK'
+</code></pre>
+<h2 id="firewall-configuration">Firewall configuration</h2>
+<p>Since these servers are technicly directly connected to the internet, a few firewall rules to help secure the servers are in order. These are the rules i have chosen to create for now, mixing security with ease of administration. Obiviously, you probably want some thigher rules in enviorments where security is more of a concern</p>
+<ul>
+<li>I have other firewalls for the rest of my ASN so i generally trust anything from one of my ASN's IP's</li>
+<li>I am ok with permitting all outgoing traffic from the k8s cluster</li>
+<li>I want to allow port 80 and 443 in from the entire internet, for services.</li>
+<li>Obiviously ICMPv6, BGP, link local should also be allowed given the setup</li>
+</ul>
+<pre><code class="language-bash">set firewall ipv6 input filter default-action 'drop'
+set firewall ipv6 input filter default-log
+set firewall ipv6 input filter rule 1 action 'accept'
+set firewall ipv6 input filter rule 1 description 'Allow everything from AS201911 (my networks)'
+set firewall ipv6 input filter rule 1 source address '2a0e:97c0:ae0::/44'
+set firewall ipv6 input filter rule 2 action 'accept'
+set firewall ipv6 input filter rule 2 description 'Accept BGP'
+set firewall ipv6 input filter rule 2 destination port '179'
+set firewall ipv6 input filter rule 2 protocol 'tcp'
+set firewall ipv6 input filter rule 3 action 'accept'
+set firewall ipv6 input filter rule 3 description 'Accept link-local'
+set firewall ipv6 input filter rule 3 source address 'fe80::/16'
+set firewall ipv6 input filter rule 4 action 'accept'
+set firewall ipv6 input filter rule 4 protocol 'ipv6-icmp'
+set firewall ipv6 input filter rule 10 action 'accept'
+set firewall ipv6 input filter rule 10 description 'Allow anything out from K8S'
+set firewall ipv6 input filter rule 10 inbound-interface name 'eth1'
+set firewall ipv6 input filter rule 30 action 'accept'
+set firewall ipv6 input filter rule 30 description 'Allow HTTP/HTTPS to K8S'
+set firewall ipv6 input filter rule 30 destination address '2a0e:97c0:ae3::/48'
+set firewall ipv6 input filter rule 30 destination port 'http,https'
+set firewall ipv6 input filter rule 30 protocol 'tcp'
+</code></pre>
+<h2 id="bgp-config">BGP Config</h2>
+<p>The BGP config here is quite simple, create peerings to AS201911, and create a listen group to dynamicly allow in K8S nodes. There is no reason to send anything other than a default route to the nodes, so we do that and limit the memory consumption to have more room for containers.</p>
+<pre><code class="language-bash">set policy prefix-list6 DEFAULT rule 1 action 'permit'
+set policy prefix-list6 DEFAULT rule 1 prefix '::/0'
+set policy route-map EXPORT_DEFAULT rule 10 action 'permit'
+set policy route-map EXPORT_DEFAULT rule 10 match ipv6 address prefix-list 'DEFAULT'
+set policy route-map EXPORT_DEFAULT rule 20 action 'deny'
+set protocols bgp address-family ipv6-unicast redistribute connected
+set protocols bgp listen range 2a0e:97c0:ae3:fff0::/64 peer-group 'K8S'
+set protocols bgp neighbor 2a0e:97c0:ae0:102::1 address-family ipv6-unicast
+set protocols bgp neighbor 2a0e:97c0:ae0:102::1 remote-as '201911'
+set protocols bgp neighbor 2a0e:97c0:ae0:102::2 address-family ipv6-unicast
+set protocols bgp neighbor 2a0e:97c0:ae0:102::2 remote-as '201911'
+set protocols bgp peer-group K8S address-family ipv6-unicast route-map export 'EXPORT_DEFAULT'
+set protocols bgp peer-group K8S password 'REPLACEWITHPASSWORD'
+set protocols bgp peer-group K8S remote-as 'external'
+set protocols bgp system-as '65666'
+</code></pre>
+<h2 id="router-specific-configuration-for-r01k8ssrv6dk">Router specific configuration for r01.k8s.srv6.dk</h2>
+<pre><code class="language-bash">set protocols bgp parameters router-id '127.0.1.1'
+set interfaces ethernet eth0 address '2a0e:97c0:ae0:102::c001/64'
+set interfaces ethernet eth1 address '2a0e:97c0:ae3:fff0::1/64'
+set interfaces loopback lo address '2a0e:97c0:ae3:ffff::1/128'
+set system host-name 'r01'
+
+</code></pre>
+<h2 id="router-specific-configuration-for-r02k8ssrv6dk">Router specific configuration for r02.k8s.srv6.dk</h2>
+<p>To be build when the direction of everything is a bit more stable</p>
+<pre><code class="language-bash">set protocols bgp parameters router-id '127.0.1.2'
+set interfaces ethernet eth0 address '2a0e:97c0:ae0:102::c002/64'
+set interfaces ethernet eth1 address '2a0e:97c0:ae3:fff0::2/64'
+set interfaces loopback lo address '2a0e:97c0:ae3:ffff::2/128'
+set system host-name 'r02'
+</code></pre></p>
+    </article>
+</section>
             <!-- endblock -->
 
             <!-- block footer -->
@@ -324,11 +420,11 @@
 
     </main>
 
-        <script>var base_url = '.';</script>
-        <script src="./assets/js/jquery-3.3.1.slim.min.js"></script>
-        <script src="./assets/js/bootstrap.bundle.min.js"></script>
-        <script src="./assets/js/mkdocs.js"></script>
-			<script src="./search/main.js" defer></script>
+        <script>var base_url = '../../..';</script>
+        <script src="../../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../../assets/js/mkdocs.js"></script>
+			<script src="../../../search/main.js" defer></script>
 
 </body>
 

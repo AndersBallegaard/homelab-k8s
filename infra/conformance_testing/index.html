@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         
-        <link rel="canonical" href="https://andersballegaard.github.io/homelab-k8s/infra/conformance_testing/">
+        <link rel="canonical" href="https://homelab.anderstb.dk/infra/conformance_testing/">
         <meta name="author" content="Anders Ballegaard">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -88,14 +88,6 @@
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
-        <a href="./"
-            class=" active 
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Conformance testing
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
         <a href="#" class="
             drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
             data-bs-toggle="collapse" data-bs-target="#deployment-collapse" aria-expanded="false">
@@ -130,6 +122,43 @@
     </li>
             </ul>
         </div>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#networking-collapse" aria-expanded="false">
+            Networking
+        </a>
+
+        <div class="collapse" id="networking-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../networking/overview/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../networking/vyos/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            VYOS Configuration
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Conformance testing
+        </a>
     </li>
                             
     <li class="drac-box-ternary">
@@ -233,13 +262,13 @@
         <div class="container">
             <div class="row row-preview">
                 <div class="col">
-                    <a href="../.."
+                    <a href="../networking/vyos/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../deployment/prepare_admin_node/"
+                    <a href="../fluxcd/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
