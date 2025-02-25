@@ -3,4 +3,8 @@ kind: Kustomization
 metadata:
   name: nfs-nas
 resources:
-- nas.yaml
+  - https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/refs/heads/master/deploy/v4.10.0/rbac-csi-nfs.yaml
+  - https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/refs/heads/master/deploy/v4.10.0/csi-nfs-driverinfo.yaml
+  - https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/refs/heads/master/deploy/v4.10.0/csi-nfs-controller.yaml
+  - https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/refs/heads/master/deploy/v4.10.0/csi-nfs-node.yaml
+  - nas.yaml

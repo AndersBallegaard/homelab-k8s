@@ -3,16 +3,16 @@ kind: StorageClass
 metadata:
   name: nfs-csi
   annotations:
-    storageclass.kubernetes.io/is-default-class: "false"
+    storageclass.kubernetes.io/is-default-class: "true"
 provisioner: nfs.csi.k8s.io
 
 parameters:
   server: 2a0e:97c0:ae0:3::10
-  share: /volume1/k3s/
+  share: /volume1/k8s_srv6_dk/
 
 reclaimPolicy: Delete
 
 volumeBindingMode: Immediate
 
 mountOptions:
-  - nfsvers=3
+  - nfsvers=4

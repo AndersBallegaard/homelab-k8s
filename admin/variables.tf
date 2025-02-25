@@ -80,7 +80,7 @@ variable "k8s_ctrl_cpu_count" {
 }
 variable "k8s_ctrl_mem_mb" {
     type = number
-    default = 2048
+    default = 3072
 }
 
 variable "k8s_worker_cpu_count" {
@@ -89,7 +89,7 @@ variable "k8s_worker_cpu_count" {
 }
 variable "k8s_worker_mem_mb" {
     type = number
-    default = 8192
+    default = 10240
 }
 variable "vm_dns_suffix" {
   type = string

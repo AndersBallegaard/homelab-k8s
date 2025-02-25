@@ -15,7 +15,10 @@ theme:
     - python
     - hcl
     - go
-
+extra:
+  analytics:
+    provider: google
+    property: G-KHLMHT0MCC
 nav:
   - Home: index.md
   - Infrastructure:
