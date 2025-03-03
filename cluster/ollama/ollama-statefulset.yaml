@@ -19,6 +19,11 @@ spec:
         image: ollama/ollama:latest
         ports:
         - containerPort: 11434
+        env:
+        - name: OLLAMA_HOST
+          value: "::"
+        - name: OLLAMA_ORIGINS
+          value: "http://[::] http://[::]:*"
         resources:
           requests:
             cpu: "2000m"

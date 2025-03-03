@@ -1,5 +1,10 @@
 ---
 machine:
+    network:
+        nameservers:
+            - 2606:4700:4700::1111
+            - 2606:4700:4700::1001
+            
     certSANs:
         - ctrl.k8s.srv6.dk
     kubelet:

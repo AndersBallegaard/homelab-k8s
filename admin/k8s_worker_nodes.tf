@@ -11,6 +11,7 @@ resource "proxmox_vm_qemu" "worker_vmhost_a" {
   scsihw      = "virtio-scsi-single"
   vm_state    = "running"
   automatic_reboot = true
+  onboot = true
 
   ciupgrade  = true
   nameserver = "2a0e:97c0:ae1::"
@@ -29,7 +30,7 @@ resource "proxmox_vm_qemu" "worker_vmhost_a" {
         disk {
           storage = "${var.proxmox_vm_storage}"
           # The size of the disk should be at least as big as the disk in the template. If it's smaller, the disk will be recreated
-          size    = "200G" 
+          size    = var.k8s_vm_diskspace 
         }
       }
     }
@@ -67,6 +68,7 @@ resource "proxmox_vm_qemu" "worker_vmhost_b" {
   scsihw      = "virtio-scsi-single"
   vm_state    = "running"
   automatic_reboot = true
+  onboot = true
 
   ciupgrade  = true
   nameserver = "2a0e:97c0:ae1::"
@@ -85,14 +87,7 @@ resource "proxmox_vm_qemu" "worker_vmhost_b" {
         disk {
           storage = "${var.proxmox_vm_storage}"
           # The size of the disk should be at least as big as the disk in the template. If it's smaller, the disk will be recreated
-          size    = "10G" 
-        }
-      }
-      scsi1 {
-        # Storage for rook
-        disk {
-          storage = "${var.proxmox_data_storage}"
-          size    = "150G" 
+          size    = var.k8s_vm_diskspace 
         }
       }
     }
@@ -130,6 +125,7 @@ resource "proxmox_vm_qemu" "worker_vmhost_c" {
   scsihw      = "virtio-scsi-single"
   vm_state    = "running"
   automatic_reboot = true
+  onboot = true
 
   ciupgrade  = true
   nameserver = "2a0e:97c0:ae1::"
@@ -148,14 +144,7 @@ resource "proxmox_vm_qemu" "worker_vmhost_c" {
         disk {
           storage = "${var.proxmox_vm_storage}"
           # The size of the disk should be at least as big as the disk in the template. If it's smaller, the disk will be recreated
-          size    = "10G" 
-        }
-      }
-      scsi1 {
-        # Storage for rook
-        disk {
-          storage = "${var.proxmox_data_storage}"
-          size    = "150G" 
+          size    = var.k8s_vm_diskspace 
         }
       }
 

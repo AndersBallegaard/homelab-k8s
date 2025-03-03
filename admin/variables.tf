@@ -91,6 +91,10 @@ variable "k8s_worker_mem_mb" {
     type = number
     default = 10240
 }
+variable "k8s_vm_diskspace" {
+    type = string
+    default = "20G"
+}
 variable "vm_dns_suffix" {
   type = string
   default = "k8s.srv6.dk"
