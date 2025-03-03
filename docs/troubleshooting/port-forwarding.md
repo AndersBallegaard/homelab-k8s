@@ -17,3 +17,13 @@ For this purpose a capacitor deployment exists, but isn't exposed via any ingres
 ```bash
 kubectl -n flux-system port-forward svc/capacitor 9000:9000 --address="::1"
 ```
+
+
+
+## Hubble-UI
+For visualizing network flows
+
+For this purpose a huble deployment exists, but isn't exposed via any ingress for security reasons, to forward it run the following command
+```bash
+kubectl port-forward -n kube-system svc/hubble-ui 8082:80 --address="::"
+```

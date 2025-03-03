@@ -1,4 +1,4 @@
-# Overview
+# IPv6 only kubernetes network overview - Cilium, VyOS, BGP
 The kubernetes lab uses Cilium as the CNI, in this deployment Cilium is running IPv6 only in native-routing mode with BGP peerings to two virtual VYOS routers acting as essentially a mix between TOR switches and a CE router for my personal ASN AS201911.
 
 Cilium was chosen as the CNI due to the following reasons
