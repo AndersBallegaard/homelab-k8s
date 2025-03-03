@@ -12,28 +12,24 @@
         <meta name="author" content="Anders Ballegaard">
       
       
-        <link rel="canonical" href="https://homelab.anderstb.dk/infra/networking/vyos/">
+        <link rel="canonical" href="https://homelab.anderstb.dk/apps/apps.list/">
       
       
-        <link rel="prev" href="../overview/">
       
       
-        <link rel="next" href="../../conformance_testing/">
-      
-      
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
     
     
       
-        <title>VYOS Configuration - K8S homelab</title>
+        <title>Apps.list - K8S homelab</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -86,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vyos" class="md-skip">
+        <a href="#services" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +98,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="K8S homelab" class="md-header__button md-logo" aria-label="K8S homelab" data-md-component="logo">
+    <a href="../.." title="K8S homelab" class="md-header__button md-logo" aria-label="K8S homelab" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -122,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              VYOS Configuration
+              Apps.list
             
           </span>
         </div>
@@ -209,7 +205,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="K8S homelab" class="md-nav__button md-logo" aria-label="K8S homelab" data-md-component="logo">
+    <a href="../.." title="K8S homelab" class="md-nav__button md-logo" aria-label="K8S homelab" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -239,7 +235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -257,19 +253,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -284,7 +278,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Infrastructure
@@ -334,7 +328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/prepare_admin_node/" class="md-nav__link">
+      <a href="../../infra/deployment/prepare_admin_node/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -356,7 +350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/prepare_proxmox/" class="md-nav__link">
+      <a href="../../infra/deployment/prepare_proxmox/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -378,7 +372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/setup_cluster/" class="md-nav__link">
+      <a href="../../infra/deployment/setup_cluster/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -405,19 +399,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -432,7 +424,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Networking
@@ -446,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+      <a href="../../infra/networking/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -465,31 +457,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    VYOS Configuration
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../infra/networking/vyos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -499,80 +470,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#specs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Specs
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#general-router-baseline" class="md-nav__link">
-    <span class="md-ellipsis">
-      General router baseline
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#firewall-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Firewall configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bgp-config" class="md-nav__link">
-    <span class="md-ellipsis">
-      BGP Config
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#router-specific-configuration-for-r01k8ssrv6dk" class="md-nav__link">
-    <span class="md-ellipsis">
-      Router specific configuration for r01.k8s.srv6.dk
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#router-specific-configuration-for-r02k8ssrv6dk" class="md-nav__link">
-    <span class="md-ellipsis">
-      Router specific configuration for r02.k8s.srv6.dk
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -593,7 +490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../conformance_testing/" class="md-nav__link">
+      <a href="../../infra/conformance_testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -615,7 +512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fluxcd/" class="md-nav__link">
+      <a href="../../infra/fluxcd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -637,7 +534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/" class="md-nav__link">
+      <a href="../../infra/kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -659,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../traefik/" class="md-nav__link">
+      <a href="../../infra/traefik/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -688,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../apps/apps/" class="md-nav__link">
+      <a href="../apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -745,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../troubleshooting/port-forwarding/" class="md-nav__link">
+      <a href="../../troubleshooting/port-forwarding/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -810,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../info/docs/" class="md-nav__link">
+      <a href="../../info/docs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -849,8 +746,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -859,54 +754,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#specs" class="md-nav__link">
+  <a href="#services" class="md-nav__link">
     <span class="md-ellipsis">
-      Specs
+      Services
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#general-router-baseline" class="md-nav__link">
+  <a href="#infrastructure-apps" class="md-nav__link">
     <span class="md-ellipsis">
-      General router baseline
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#firewall-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Firewall configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bgp-config" class="md-nav__link">
-    <span class="md-ellipsis">
-      BGP Config
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#router-specific-configuration-for-r01k8ssrv6dk" class="md-nav__link">
-    <span class="md-ellipsis">
-      Router specific configuration for r01.k8s.srv6.dk
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#router-specific-configuration-for-r02k8ssrv6dk" class="md-nav__link">
-    <span class="md-ellipsis">
-      Router specific configuration for r02.k8s.srv6.dk
+      Infrastructure apps
     </span>
   </a>
   
@@ -931,101 +790,18 @@
   
 
 
-<h1 id="vyos">Vyos</h1>
-<p>Two VYOS Routers are used to provide external connectivity to the cluster, eventually this should be automated using cloud-init for VYOS, but right now i can't be bothered, so this is how they are setup</p>
-<h2 id="specs">Specs</h2>
-<p>Both of the virtual routers have these specs, and are being run on proxmox. The specs are probably subject to change depending on the volume of traffic. But even with a full IPv6 internet routing table being annouced to them from AS201911 they seem happy with these modest specs.</p>
+  <h1>Apps.list</h1>
+
+<p>I classify the apps running on the cluster in two catagories: Infrastructure, and Services</p>
+<h3 id="services">Services</h3>
 <ul>
-<li>1 core</li>
-<li>2GB Ram</li>
-<li>1 NIC in AS201911 Transit network</li>
-<li>1 NIC in K8S network</li>
+<li><strong>Ollama + Open-webui</strong> - Locally hosted AI chatbots, for private and secure AI without any ratelimits</li>
 </ul>
-<h2 id="general-router-baseline">General router baseline</h2>
+<h3 id="infrastructure-apps">Infrastructure apps</h3>
 <ul>
-<li>Setup accounts</li>
-<li>Setup update checking</li>
-<li>Disable SSH Password auth</li>
+<li><strong>Hubble UI</strong> - Observability tool for cilium</li>
+<li><strong>Capacitor</strong> - UI for FluxCD</li>
 </ul>
-<pre><code class="language-bash"># Unless you want me, and only me to login to your router, i would sudgest changing this key
-set system login user anders authentication public-keys JUMPHOST key 'AAAAB3NzaC1yc2EAAAADAQABAAABgQC8LOd5EgLmJiqWlikJMBNqn92c1TMyDYYJybmMRwu3ysOcf5jWwzVx1d6jZOPboH241Q3Rg59AtqJpFLEDis0myVvdLfcZa88DsjhfFUgDA4LMatItoUpqj2xKwJsTHKWjaSL5zVGv1rXOnMv3CA90Cye7NrEP11AxrLeCawpsQC/Gwcrc7JLoKrYK1bz2zPI9WwPonKhOUC0zfpAX9G9mj3Ybp7aogYAsBweoFw4X533usswFDkPZl9SYnetufEZ/XGgl3TFoDETsQ4Ddztazu9snPRwlIyAq2Lv1+tU2hc2lKu0AWv4zPehEdMz8dXodB1bfkD63Rpy004Naa+tboJnJQUUpfZqqVEpI0byp7t64suAU1IvmgZo02A3kg6m+HJuMU6k1hAbrgXttRWR/fRDSvdGydPiyi+8mSvVYrstcpH63mvMw2gVOkoDeBzP+ClejkCoTLuXSb38reAivG0j02FyyoWRrBumfBHJb6lC8hUHQi04DfX2B/G+0UVM='
-set system login user anders authentication public-keys JUMPHOST type 'ssh-rsa'
-
-set system name-server '2606:4700:4700::1111'
-set system update-check auto-check
-set system update-check url 'https://raw.githubusercontent.com/vyos/vyos-nightly-build/refs/heads/current/version.json'
-
-set service ssh disable-password-authentication
-set system domain-name 'k8s.srv6.dk'
-
-set interfaces ethernet eth0 description 'AS201911_TRANSIT'
-set interfaces ethernet eth1 description 'K8S_NETWORK'
-</code></pre>
-<h2 id="firewall-configuration">Firewall configuration</h2>
-<p>Since these servers are technicly directly connected to the internet, a few firewall rules to help secure the servers are in order. These are the rules i have chosen to create for now, mixing security with ease of administration. Obiviously, you probably want some thigher rules in enviorments where security is more of a concern</p>
-<ul>
-<li>I have other firewalls for the rest of my ASN so i generally trust anything from one of my ASN's IP's</li>
-<li>I am ok with permitting all outgoing traffic from the k8s cluster</li>
-<li>I want to allow port 80 and 443 in from the entire internet, for services.</li>
-<li>Obiviously ICMPv6, BGP, link local should also be allowed given the setup</li>
-</ul>
-<pre><code class="language-bash">set firewall ipv6 input filter default-action 'drop'
-set firewall ipv6 input filter default-log
-set firewall ipv6 input filter rule 1 action 'accept'
-set firewall ipv6 input filter rule 1 description 'Allow everything from AS201911 (my networks)'
-set firewall ipv6 input filter rule 1 source address '2a0e:97c0:ae0::/44'
-set firewall ipv6 input filter rule 2 action 'accept'
-set firewall ipv6 input filter rule 2 description 'Accept BGP'
-set firewall ipv6 input filter rule 2 destination port '179'
-set firewall ipv6 input filter rule 2 protocol 'tcp'
-set firewall ipv6 input filter rule 3 action 'accept'
-set firewall ipv6 input filter rule 3 description 'Accept link-local'
-set firewall ipv6 input filter rule 3 source address 'fe80::/16'
-set firewall ipv6 input filter rule 4 action 'accept'
-set firewall ipv6 input filter rule 4 protocol 'ipv6-icmp'
-set firewall ipv6 input filter rule 10 action 'accept'
-set firewall ipv6 input filter rule 10 description 'Allow anything out from K8S'
-set firewall ipv6 input filter rule 10 inbound-interface name 'eth1'
-set firewall ipv6 input filter rule 30 action 'accept'
-set firewall ipv6 input filter rule 30 description 'Allow HTTP/HTTPS to K8S'
-set firewall ipv6 input filter rule 30 destination address '2a0e:97c0:ae3::/48'
-set firewall ipv6 input filter rule 30 destination port 'http,https'
-set firewall ipv6 input filter rule 30 protocol 'tcp'
-</code></pre>
-<h2 id="bgp-config">BGP Config</h2>
-<p>The BGP config here is quite simple, create peerings to AS201911, and create a listen group to dynamicly allow in K8S nodes. There is no reason to send anything other than a default route to the nodes, so we do that and limit the memory consumption to have more room for containers.</p>
-<pre><code class="language-bash">set policy prefix-list6 DEFAULT rule 1 action 'permit'
-set policy prefix-list6 DEFAULT rule 1 prefix '::/0'
-set policy route-map EXPORT_DEFAULT rule 10 action 'permit'
-set policy route-map EXPORT_DEFAULT rule 10 match ipv6 address prefix-list 'DEFAULT'
-set policy route-map EXPORT_DEFAULT rule 20 action 'deny'
-set protocols bgp address-family ipv6-unicast redistribute connected
-set protocols bgp listen range 2a0e:97c0:ae3:fff0::/64 peer-group 'K8S'
-set protocols bgp neighbor 2a0e:97c0:ae0:102::1 address-family ipv6-unicast
-set protocols bgp neighbor 2a0e:97c0:ae0:102::1 remote-as '201911'
-set protocols bgp neighbor 2a0e:97c0:ae0:102::2 address-family ipv6-unicast
-set protocols bgp neighbor 2a0e:97c0:ae0:102::2 remote-as '201911'
-set protocols bgp peer-group K8S address-family ipv6-unicast route-map export 'EXPORT_DEFAULT'
-set protocols bgp peer-group K8S password 'REPLACEWITHPASSWORD'
-set protocols bgp peer-group K8S remote-as 'external'
-set protocols bgp system-as '65666'
-</code></pre>
-<h2 id="router-specific-configuration-for-r01k8ssrv6dk">Router specific configuration for r01.k8s.srv6.dk</h2>
-<pre><code class="language-bash">set protocols bgp parameters router-id '127.0.1.1'
-set interfaces ethernet eth0 address '2a0e:97c0:ae0:102::c001/64'
-set interfaces ethernet eth1 address '2a0e:97c0:ae3:fff0::1/64'
-set interfaces loopback lo address '2a0e:97c0:ae3:ffff::1/128'
-set system host-name 'r01'
-
-</code></pre>
-<h2 id="router-specific-configuration-for-r02k8ssrv6dk">Router specific configuration for r02.k8s.srv6.dk</h2>
-<p>To be build when the direction of everything is a bit more stable</p>
-<pre><code class="language-bash">set protocols bgp parameters router-id '127.0.1.2'
-set interfaces ethernet eth0 address '2a0e:97c0:ae0:102::c002/64'
-set interfaces ethernet eth1 address '2a0e:97c0:ae3:fff0::2/64'
-set interfaces loopback lo address '2a0e:97c0:ae3:ffff::2/128'
-set system host-name 'r02'
-</code></pre>
 
 
 
@@ -1074,10 +850,10 @@ set system host-name 'r02'
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>
