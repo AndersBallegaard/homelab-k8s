@@ -10,4 +10,7 @@ go install sigs.k8s.io/hydrophone@latest
 
 ~/go/bin/hydrophone --conformance --output-dir ./${results_name}/
 
+unlink latest
+ln -s ${results_name}/ latest
+
 echo "Remember to commit these results, please specify if it was done as part of an upgrade, cluster rebuild, or improvement"
