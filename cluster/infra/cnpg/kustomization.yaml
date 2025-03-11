@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: cillium-config
+resources:
+  - namespace.yaml
+  - repo.yaml
+  - chart.yaml
+  - database-example.yaml # Remove when other services start using cnpg, just here to verify cnpg works

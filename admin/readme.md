@@ -58,7 +58,10 @@ tofu init
 ```bash
 # Create BGP Password
 kubectl create secret generic -n kube-system --type=string bgp-auth-secret --from-literal=password=REPLACEWITHPASSWORD
-
+# Run from root of repo
+# Sets up BGP peerings, otherwise things just crashloop
+# Flux will maintain this, but without this applied flux can't access the source repo due to internet connectivity in the cluster not working
+kubectl apply -k cluster/infra/cilium/
 ```
 
 ## Setup fluxCD
