@@ -23,5 +23,7 @@ enableIPv4Masquerade: false
 enableIPv6Masquerade: false
 gatewayAPI:
   enabled: true
+ingressController:
+  enabled: true
 securityContext:
   privileged: true
